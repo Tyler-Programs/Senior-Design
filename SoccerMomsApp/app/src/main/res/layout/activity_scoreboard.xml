@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_scoreboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.tbecker012.soccermomsapp.ScoreboardActivity">
+
+    <Button
+        android:text="+"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/userScoreIncButton"
+        android:textSize="14sp"
+        android:layout_marginTop="85dp"
+        android:layout_marginLeft="13dp"/>
+
+    <Button
+        android:text="-"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/userScoreDecButton"
+        android:textSize="16sp"
+        android:layout_marginTop="85dp"
+        android:layout_marginLeft="68dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_marginLeft="15dp">
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Your Team"
+            android:ems="10"
+            android:id="@+id/userTeamNameField"
+            android:textSize="16dp"
+            android:textStyle="normal|bold"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/userScoreField"
+            android:textAlignment="center"
+            android:textStyle="normal|bold"
+            android:text="0"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <Button
+        android:text="+"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/oppScoreIncButton"
+        android:textSize="14sp"
+        android:minHeight="10dp"
+        android:minWidth="10dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginLeft="217dp" />
+
+    <Button
+        android:text="-"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/oppScoreDecButton"
+        android:textSize="16sp"
+        android:minHeight="10dp"
+        android:minWidth="10dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginLeft="273dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:layout_marginLeft="220dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Opponent"
+            android:ems="10"
+            android:id="@+id/oppTeamNameField"
+            android:textSize="16dp"
+            android:textStyle="normal|bold"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/oppScoreField"
+            android:textStyle="normal|bold"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:text="0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/userScoreIncButton"
+        android:layout_centerHorizontal="true">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="275dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/oppScoreDecButton"
+        android:layout_centerHorizontal="true">
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="300dp" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+
+            <TextView
+                android:text="Game Events Summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:textAlignment="center" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="111dp"
+                android:textSize="12dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/summaryArea" />
+
+            <Button
+                android:text="Main Menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/homeButton" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:text="Game Clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView8" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView8">
+
+        <EditText
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:gravity="right"
+            android:ems="10"
+            android:id="@+id/gcMinField"
+            android:text="00" />
+
+        <TextView
+            android:text=":"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:id="@+id/textView9"
+            android:layout_weight="0.04" />
+
+        <EditText
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:gravity="left"
+            android:ems="10"
+            android:id="@+id/gcSecField"
+            android:text="00" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="240dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="172dp"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:text="Start"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:id="@+id/startGCButton"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Stop"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:id="@+id/stopGCButton"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Reset"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:id="@+id/resetGCButton"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <TextView
+        android:text="Penalty Clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView10" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textView10"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="0dp">
+
+        <EditText
+            android:layout_width="37dp"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/pcMinField"
+            android:layout_weight="1"
+            android:text="00" />
+
+        <TextView
+            android:text=":"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:id="@+id/textView11"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="37dp"
+            android:layout_height="match_parent"
+            android:gravity="left"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/pcSecField"
+            android:layout_weight="1"
+            android:text="00" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="240dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView10"
+        android:layout_marginTop="27dp">
+
+        <Button
+            android:text="Start"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:id="@+id/startPCButton"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Stop"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:id="@+id/stopPCButton"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Reset"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:id="@+id/resetPCButton"
+            android:layout_weight="1" />
+    </LinearLayout>
+</RelativeLayout>
