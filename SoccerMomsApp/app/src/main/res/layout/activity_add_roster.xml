@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.tbecker012.soccermomsapp.AddRosterActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_add_roster" />
+
+    <TextView
+        android:text="Add / Update Roster"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:id="@+id/textView17" />
+
+    <Button
+        android:text="Main Menu"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="510dp"
+        android:id="@+id/mainMenuButton" />
+
+    <Button
+        android:text="Finish Roster"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="510dp"
+        android:layout_marginLeft="190dp"
+        android:id="@+id/doneRosterButton" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:layout_marginTop="100dp">
+
+        <Button
+            android:text="Add/Save Player"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addPlayerButton" />
+
+        <TextView
+            android:text="Player Name:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:id="@+id/nameField" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text=""
+            android:gravity="center"
+            android:ems="10"
+            android:id="@+id/addNameField" />
+
+        <TextView
+            android:text="Age:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:id="@+id/ageField" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:gravity="center"
+            android:ems="10"
+            android:id="@+id/addAgeField" />
+
+        <TextView
+            android:text="Number:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:id="@+id/numberField" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:gravity="center"
+            android:ems="10"
+            android:id="@+id/addTimeField" />
+
+        <TextView
+            android:text="Position:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:id="@+id/positionField" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:id="@+id/spinner" />
+
+        <TextView
+            android:text="Grade:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:id="@+id/gradeField" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:gravity="center"
+            android:ems="10"
+            android:id="@+id/addGradeField" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
