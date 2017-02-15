@@ -55,6 +55,34 @@
             android:layout_weight="0.83" />
     </LinearLayout>
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="37dp">
+
+        <Button
+            android:text="New Event"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:id="@+id/button"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Save Changes"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:id="@+id/button2"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Button
+        android:text="Main Menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="510dp"
+        android:id="@+id/mainMenuButton" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="380dp"
@@ -2262,32 +2290,4 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="37dp">
-
-        <Button
-            android:text="New Event"
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:id="@+id/button"
-            android:layout_weight="1" />
-
-        <Button
-            android:text="Save Changes"
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:id="@+id/button2"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-    <Button
-        android:text="Main Menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="510dp"
-        android:id="@+id/mainMenuButton" />
 </android.support.design.widget.CoordinatorLayout>

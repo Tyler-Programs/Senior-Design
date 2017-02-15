@@ -12,6 +12,7 @@ import android.widget.EditText;
 
 public class AddRosterActivity extends AppCompatActivity implements EditText.OnClickListener{
     public Button mmb, drb;
+    public EditText anf, aaf, anuf, agf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,11 @@ public class AddRosterActivity extends AppCompatActivity implements EditText.OnC
     public void init(){
         mmb = (Button) findViewById(R.id.mainMenuButton);
         drb = (Button) findViewById(R.id.doneRosterButton);
+
+        anf = (EditText) findViewById(R.id.addNameField);
+        aaf = (EditText) findViewById(R.id.addAgeField);
+        anuf = (EditText) findViewById(R.id.addNumberField);
+        agf = (EditText) findViewById(R.id.addGradeField);
 
         mmb.setOnClickListener(new View.OnClickListener() {
             @Override
