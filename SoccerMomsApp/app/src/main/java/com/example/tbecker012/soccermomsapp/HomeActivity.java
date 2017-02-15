@@ -19,6 +19,7 @@ public class HomeActivity extends AppCompatActivity {
         init();
     }
 
+
     public void init() {
         vtb = (Button) findViewById(R.id.viewTeamButton);
         atb = (Button) findViewById(R.id.addTeamButton);
