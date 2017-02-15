@@ -106,7 +106,7 @@
             android:inputType="number"
             android:gravity="center"
             android:ems="10"
-            android:id="@+id/addTimeField" />
+            android:id="@+id/addNumberField" />
 
         <TextView
             android:text="Position:"

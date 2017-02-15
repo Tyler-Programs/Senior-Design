@@ -32,6 +32,11 @@ public class AddRosterActivity extends AppCompatActivity implements EditText.OnC
         addnumf = (EditText) findViewById(R.id.addTimeField); // NOTE: THIS IS NAMED WRONG, ID IS HOOKED UP TO RIGHT COMPONENT THOUGH
         addgradef = (EditText) findViewById(R.id.addGradeField);
 
+        anf = (EditText) findViewById(R.id.addNameField);
+        aaf = (EditText) findViewById(R.id.addAgeField);
+        anuf = (EditText) findViewById(R.id.addNumberField);
+        agf = (EditText) findViewById(R.id.addGradeField);
+
         mmb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
