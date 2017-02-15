@@ -32,7 +32,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <!--
                 xxxxxxxxxxxxxxxxxxxxxx
@@ -57,7 +57,8 @@
                     android:ems="10"
                     android:id="@+id/nameField1"
                     android:textSize="12sp"
-                    android:layout_height="35dp" />
+                    android:layout_height="35dp"
+                    />
 
                 <EditText
                     android:layout_width="90dp"
