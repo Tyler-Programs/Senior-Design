@@ -2317,6 +2317,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="510dp"
-        android:id="@+id/mainMenuButton" />
+        android:id="@+id/mainMenuButton"
+        android:onClick="onClick (EventsPageActivity)" />
 
 </android.support.design.widget.CoordinatorLayout>
