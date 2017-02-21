@@ -1942,8 +1942,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton1"
-                    android:textSize="16dp"
-                    android:onClick="launchMaps" />
+                    android:textSize="16dp" />
 
                 <Button
                     android:text=""
@@ -2290,4 +2289,34 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="37dp">
+
+        <Button
+            android:text="New Event"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:id="@+id/newEventButton"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Save Changes"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:id="@+id/saveButton"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Button
+        android:text="Main Menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="510dp"
+        android:id="@+id/mainMenuButton" />
+
 </android.support.design.widget.CoordinatorLayout>
