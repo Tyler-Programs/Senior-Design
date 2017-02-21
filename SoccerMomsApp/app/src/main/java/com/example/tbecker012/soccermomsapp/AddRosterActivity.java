@@ -8,13 +8,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 public class AddRosterActivity extends AppCompatActivity implements EditText.OnClickListener{
     public Button mmb, drb, apb;
     private FileManager fileManager;
     private EditText addnamef, addagef, addnumf, addgradef;
+    public Spinner posSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +35,8 @@ public class AddRosterActivity extends AppCompatActivity implements EditText.OnC
         addnumf = (EditText) findViewById(R.id.addTimeField); // NOTE: THIS IS NAMED WRONG, ID IS HOOKED UP TO RIGHT COMPONENT THOUGH
         addgradef = (EditText) findViewById(R.id.addGradeField);
 
-        anf = (EditText) findViewById(R.id.addNameField);
-        aaf = (EditText) findViewById(R.id.addAgeField);
-        anuf = (EditText) findViewById(R.id.addNumberField);
-        agf = (EditText) findViewById(R.id.addGradeField);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.soccer_positions, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         mmb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +62,8 @@ public class AddRosterActivity extends AppCompatActivity implements EditText.OnC
                 clearEditTextFields(); // reset the edit text fields for the next player
             }
         });
+
+        posSpinner.setAdapter(adapter);
     }
 
     @Override
