@@ -22,7 +22,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class RosterPageActivity extends AppCompatActivity implements EditText.OnClickListener{
-    public Button hb, ub, cb1, cb2, cb3, cb4, cb5, cb6, cb7, cb8, cb9, cb10, cb11, cb12, cb13, cb14, cb15, cb16, cb17, cb18, cb19, cb20, cb21, cb22, cb23, cb24, cb25, cb26, cb27, cb28, cb29, cb30, cb31, cb32, cb33, cb34, cb35, cb36, cb37, cb38, cb39, cb40;
+    public Button hb, ub, ab, cb1, cb2, cb3, cb4, cb5, cb6, cb7, cb8, cb9, cb10, cb11, cb12, cb13, cb14, cb15, cb16, cb17, cb18, cb19, cb20, cb21, cb22, cb23, cb24, cb25, cb26, cb27, cb28, cb29, cb30, cb31, cb32, cb33, cb34, cb35, cb36, cb37, cb38, cb39, cb40;
     public EditText nf1, nf2, nf3, nf4, nf5, nf6, nf7, nf8, nf9, nf10, nf11, nf12, nf13, nf14, nf15, nf16, nf17, nf18, nf19, nf20, nf21, nf22, nf23, nf24, nf25, nf26, nf27, nf28, nf29, nf30, nf31, nf32, nf33, nf34, nf35, nf36, nf37, nf38, nf39, nf40;
     public EditText af1, af2, af3, af4, af5, af6, af7, af8, af9, af10, af11, af12, af13, af14, af15, af16, af17, af18, af19, af20, af21, af22, af23, af24, af25, af26, af27, af28, af29, af30, af31, af32, af33, af34, af35, af36, af37, af38, af39, af40;
     public EditText nuf1, nuf2, nuf3, nuf4, nuf5, nuf6, nuf7, nuf8, nuf9, nuf10, nuf11, nuf12, nuf13, nuf14, nuf15, nuf16, nuf17, nuf18, nuf19, nuf20, nuf21, nuf22, nuf23, nuf24, nuf25, nuf26, nuf27, nuf28, nuf29, nuf30, nuf31, nuf32, nuf33, nuf34, nuf35, nuf36, nuf37, nuf38, nuf39, nuf40;
@@ -39,6 +39,7 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
     public void init(){
         hb = (Button) findViewById(R.id.homeButton);
         ub = (Button) findViewById(R.id.updateButton);
+        ub = (Button) findViewById(R.id.addButton);
         cb1 = (Button) findViewById(R.id.clearButton1);
         cb2 = (Button) findViewById(R.id.clearButton2);
         cb3 = (Button) findViewById(R.id.clearButton3);
@@ -295,6 +296,13 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
             }
         });
 
+        ab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RosterPageActivity.this, AddRosterActivity.class));
+            }
+        });
+
         cb1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -402,7 +410,6 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
                 break;
 
             case R.id.updateButton:
-
                 break;
         }
     }

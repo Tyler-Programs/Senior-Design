@@ -65,14 +65,14 @@
             android:text="New Event"
             android:layout_width="150dp"
             android:layout_height="match_parent"
-            android:id="@+id/button"
+            android:id="@+id/neb"
             android:layout_weight="1" />
 
         <Button
             android:text="Save Changes"
             android:layout_width="150dp"
             android:layout_height="match_parent"
-            android:id="@+id/button2"
+            android:id="@+id/scb"
             android:layout_weight="1" />
     </LinearLayout>
 

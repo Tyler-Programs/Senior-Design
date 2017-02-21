@@ -20,13 +20,13 @@
         android:text="Main Menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="515dp"
         android:id="@+id/homeButton" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="460dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="115dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -2222,16 +2222,9 @@
         </LinearLayout>
 </ScrollView>
 
-    <Button
-        android:text="Update"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_marginLeft="272dp"
-        android:id="@+id/updateButton" />
-
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="85dp"
         android:layout_width="300dp"
         android:layout_height="30dp">
 
@@ -2279,5 +2272,26 @@
             android:textSize="12dp"
             android:id="@+id/textView2"
             android:layout_weight="0.01" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <Button
+            android:text="Add Player"
+            android:layout_width="175dp"
+            android:layout_height="45dp"
+            android:id="@+id/addButton" />
+
+        <Button
+            android:text="Update"
+            android:layout_width="175dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/updateButton" />
+
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

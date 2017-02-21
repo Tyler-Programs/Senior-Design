@@ -21,6 +21,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
 public class EventsPageActivity extends AppCompatActivity {
+    public Button neb, scb, mmb;
     public EditText if1, if2, if3, if4, if5, if6, if7, if8, if9, if10, if11, if12, if13, if14, if15, if16, if17, if18, if19, if20, if21, if22, if23, if24, if25, if26, if27, if28, if29, if30, if31, if32, if33, if34, if35, if36, if37, if38, if39, if40, if41, if42, if43, if44, if45, if46, if47, if48, if49, if50;
     public EditText df1, df2, df3, df4, df5, df6, df7, df8, df9, df10, df11, df12, df13, df14, df15, df16, df17, df18, df19, df20, df21, df22, df23, df24, df25, df26, df27, df28, df29, df30, df31, df32, df33, df34, df35, df36, df37, df38, df39, df40, df41, df42, df43, df44, df45, df46, df47, df48, df49, df50;
     public EditText tf1, tf2, tf3, tf4, tf5, tf6, tf7, tf8, tf9, tf10, tf11, tf12, tf13, tf14, tf15, tf16, tf17, tf18, tf19, tf20, tf21, tf22, tf23, tf24, tf25, tf26, tf27, tf28, tf29, tf30, tf31, tf32, tf33, tf34, tf35, tf36, tf37, tf38, tf39, tf40, tf41, tf42, tf43, tf44, tf45, tf46, tf47, tf48, tf49, tf50;
@@ -36,6 +37,24 @@ public class EventsPageActivity extends AppCompatActivity {
     }
 
     public void init(){
+        neb = (Button) findViewById(R.id.newEventButton);
+        scb = (Button) findViewById(R.id.saveChangesButton);
+        mmb = (Button) findViewById(R.id.mainMenuButton);
+
+        neb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(EventsPageActivity.this, AddEventsActivity.class));
+            }
+        });
+
+        mmb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(EventsPageActivity.this, DirectoryActivity.class));
+            }
+        });
+
         if1 = (EditText) findViewById(R.id.idField1);
         if2 = (EditText) findViewById(R.id.idField2);
         if3 = (EditText) findViewById(R.id.idField3);
