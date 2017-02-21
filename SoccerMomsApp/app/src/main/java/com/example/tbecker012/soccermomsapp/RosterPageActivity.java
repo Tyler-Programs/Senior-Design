@@ -3,6 +3,7 @@ package com.example.tbecker012.soccermomsapp;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +17,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,7 +26,10 @@ import java.io.InputStreamReader;
 
 public class RosterPageActivity extends AppCompatActivity implements EditText.OnClickListener{
     public Button hb, ub, cb1;
-    public EditText nf1, nf2;
+    public EditText nf1, nf2, nf3, nf4, nf5; // name fields
+    public EditText af1, af2, af3, af4, af5; // age fields
+    public EditText numf1, numf2, numf3, numf4, numf5; // num field
+    public EditText gf1, gf2, gf3, gf4, gf5; // grade field
     public Spinner ps1, ps2, ps3, ps4, ps5, ps6, ps7, ps8, ps9, ps10, ps11, ps12, ps13, ps14, ps15, ps16, ps17, ps18, ps19, ps20, ps21, ps22, ps23, ps24, ps25, ps26, ps27, ps28, ps29, ps30, ps31, ps32, ps33, ps34, ps35, ps36, ps37, ps38, ps39, ps40;
 
     @Override
@@ -34,6 +40,30 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
     }
 
     public void init(){
+        /*
+        Delete below once dynamic
+         */
+        nf3 = (EditText) findViewById(R.id.nameField3);
+        nf4 = (EditText) findViewById(R.id.nameField4);
+        nf5 = (EditText) findViewById(R.id.nameField5);
+        af1 = (EditText) findViewById(R.id.ageField1);
+        af2 = (EditText) findViewById(R.id.ageField2);
+        af3 = (EditText) findViewById(R.id.ageField3);
+        af4 = (EditText) findViewById(R.id.ageField4);
+        af5 = (EditText) findViewById(R.id.ageField5);
+        numf1 = (EditText) findViewById(R.id.numField1);
+        numf2 = (EditText) findViewById(R.id.numField2);
+        numf3 = (EditText) findViewById(R.id.numField3);
+        numf4 = (EditText) findViewById(R.id.numField4);
+        numf5 = (EditText) findViewById(R.id.numField5);
+        gf1 = (EditText) findViewById(R.id.gradeField1);
+        gf2 = (EditText) findViewById(R.id.gradeField2);
+        gf3 = (EditText) findViewById(R.id.gradeField3);
+        gf4 = (EditText) findViewById(R.id.gradeField4);
+        gf5 = (EditText) findViewById(R.id.gradeField5);
+        /*
+        Delete above once dynamic
+         */
         hb = (Button) findViewById(R.id.homeButton);
         ub = (Button) findViewById(R.id.updateButton);
         cb1 = (Button) findViewById(R.id.clearButton1);
@@ -150,6 +180,9 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         ps38.setAdapter(adapter);
         ps39.setAdapter(adapter);
         ps40.setAdapter(adapter);
+
+
+        readFromFile(getApplicationContext()); // DELETE THIS LINE ONCE DYNAMIC
     }
 
     @Override
@@ -164,24 +197,62 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         }
     }
 
-    private String readFromFile(Context context) {
+    private void readFromFile(Context context) {
 
         String ret = "";
 
         try {
-            InputStream inputStream = context.openFileInput("address.txt");
+            File myFile = new File("" + context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + "Team1"), "Team1" + "Roster.txt"); // replace 'Team1' with teamName once dynamic
+            FileInputStream in = new FileInputStream(myFile);
+            String[] data = new String[6];
 
-            if (inputStream != null) {
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+            if (in != null) { // Name#Age#Player Number#Position#Grade
+                InputStreamReader inputStreamReader = new InputStreamReader(in);
                 BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                String receiveString = "";
-                StringBuilder stringBuilder = new StringBuilder();
 
-                while ((receiveString = bufferedReader.readLine()) != null) {
-                    stringBuilder.append(receiveString);
-                }
-                inputStream.close();
-                ret = stringBuilder.toString();
+                /*
+                Loop once dynamic
+                 */
+                ret = bufferedReader.readLine();
+                data = ret.split("#");
+                nf1.setText(data[0]); // first and last name
+                af1.setText(data[1]);
+                numf1.setText(data[2]);
+                ps1.setSelection(1);
+                gf1.setText(data[4]);
+                ret = bufferedReader.readLine();
+                data = ret.split("#");
+                nf2.setText(data[0]); // first and last name
+                af2.setText(data[1]);
+                numf2.setText(data[2]);
+                ps2.setSelection(1);
+                gf2.setText(data[4]);
+                ret = bufferedReader.readLine();
+                data = ret.split("#");
+                nf3.setText(data[0]); // first and last name
+                ps3.setSelection(1);
+                af3.setText(data[1]);
+                numf3.setText(data[2]);
+                gf3.setText(data[4]);
+                ret = bufferedReader.readLine();
+                data = ret.split("#");
+                nf4.setText(data[0]); // first and last name
+                ps4.setSelection(1);
+                af4.setText(data[1]);
+                numf4.setText(data[2]);
+                gf4.setText(data[4]);
+                ret = bufferedReader.readLine();
+                data = ret.split("#");
+                nf5.setText(data[0]); // first and last name
+                af5.setText(data[1]);
+                numf5.setText(data[2]);
+                ps5.setSelection(1);
+                gf5.setText(data[4]);
+                /*
+                ^^^^^^^^^^^^^^^^^^^^^^^^^
+                 */
+
+                in.close();
             }
         } catch (FileNotFoundException e) {
             Log.e("login activity", "File not found: " + e.toString());
@@ -189,6 +260,6 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
             Log.e("login activity", "Can not read file: " + e.toString());
         }
 
-        return ret;
+       // return ret; // return used to be String
     }
 }

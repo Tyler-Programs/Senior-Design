@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
+import java.util.List;
 
 /**
  * Created by Tyler on 2/14/2017.
@@ -81,7 +82,7 @@ public class FileManager {
         }
     }
 
-    public void createEventsFile(Context context)
+    public File createEventsFile(Context context)
     {
         // check if sd card exists
         if (android.os.Environment.getExternalStorageState().equals(
@@ -94,6 +95,7 @@ public class FileManager {
                     FileOutputStream out = new FileOutputStream(newFile); // open the file for writing
                     out.write("".getBytes()); // write nothing to the file
                     out.close(); // close the file when done writing
+                    return newFile;
                 } catch (Exception e) {
                     Log.e("error", "Problem creating file");
                     e.printStackTrace();
@@ -107,6 +109,7 @@ public class FileManager {
         else{
             Log.e("error", "SD Card not found");
         }
+        return null;
     }
 
 
@@ -129,9 +132,55 @@ public class FileManager {
                 e.printStackTrace();
                 Log.e("error","FILE NOT FOUND");
             }
+    }
+
+    public boolean rewriteEvents(List<String> data, Context context){
+        /*
+        data in format: eventID#name#date#time#address
+         */
+        try {
+            File oldFile = new File("" + context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + teamName), teamName + "Events.txt"); // get the current events file
+            oldFile.renameTo(new File("" + context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + teamName), teamName + "Events-old.txt")); // rename the file to  "...-old.txt"
+            createEventsFile(context); // create the new file
+
+            File newFile = createEventsFile(context); // create the new events file
+            FileOutputStream out = new FileOutputStream(newFile, true); // create the write stream
+            for(int i=0;i<data.size();i++) // loop the size of the list
+            {
+                out.write(data.indexOf(i)); // write each new event
+                out.write("\n".getBytes()); // write a new line after the event
+            }
+            out.close(); // close the file when done writing
+            return true; // successfully written
+        }catch(Exception e){
+            Log.e("error","Error rewriting events file");
+            e.printStackTrace();
         }
 
+        return false; // could not write properly
+    }
 
+    public void addEvent(String data, Context context)
+    {
+        /*
+        data in format: eventID#address/n
+         */
+        try{
+            File newFile = new File("" + context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + teamName), teamName + "Events.txt"); // get the file
+            FileOutputStream out = new FileOutputStream(newFile, true); //open file with appending option
+            out.write(data.getBytes());
+            out.write("\n".getBytes()); // add the newline character
+            out.close();
+        }catch (Exception e) {
+            e.printStackTrace();
+            Log.e("error", "FILE NOT FOUND");
+        }
+    }
+
+    public void removeEvent(long evtID, Context context)
+    {
+        // find the evtID in the Events.txt file and remove that line
+    }
 
 }
 

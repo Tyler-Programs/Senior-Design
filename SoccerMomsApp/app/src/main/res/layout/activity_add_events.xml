@@ -91,7 +91,8 @@
             android:inputType="date"
             android:gravity="center"
             android:ems="10"
-            android:id="@+id/addDateField" />
+            android:id="@+id/addDateField"
+            android:hint="MM/DD/YYYY" />
 
         <TextView
             android:text="Time:"
@@ -108,7 +109,8 @@
             android:inputType="time"
             android:gravity="center"
             android:ems="10"
-            android:id="@+id/addTimeField" />
+            android:id="@+id/addTimeField"
+            android:hint="24-HH:MM" />
 
         <TextView
             android:text="Location:"
