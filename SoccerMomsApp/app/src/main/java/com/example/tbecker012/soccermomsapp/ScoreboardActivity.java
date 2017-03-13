@@ -125,18 +125,18 @@ public class ScoreboardActivity extends AppCompatActivity implements EditText.On
                 userScore++;
                 userSF.setText(String.valueOf(userScore));
                 String timeOfEvent = getGCMinutes() + " : " + gcSeconds.getText().toString();
-                summArea.setText("Time: " + timeOfEvent);
+                String st = summArea.getText().toString();
+                summArea.setText(st + "\n\nTime: " + timeOfEvent + ". Goal scored by home team. Score is: " + userScore + "-" + oppScore);
 
-                Intent intent = new Intent(this, GoalActivity.class);
-                startActivity(intent);
-
-                GoalActivity ga = new GoalActivity();
                 break;
 
             case R.id.userScoreDecButton:
                 if(userScore > 0){
                     userScore--;
                     userSF.setText(String.valueOf(userScore));
+                    String st3 = summArea.getText().toString();
+                    summArea.setText(st3 + "\nPrevious goal cancelled.  Score is: " + userScore + "-" + oppScore);
+
                     break;
                 }
                 else {
@@ -146,18 +146,25 @@ public class ScoreboardActivity extends AppCompatActivity implements EditText.On
             case R.id.oppScoreIncButton:
                 oppScore++;
                 oppSF.setText(String.valueOf(oppScore));
+                String timeOfEvent2 = getGCMinutes() + " : " + gcSeconds.getText().toString();
+                String st2 = summArea.getText().toString();
+                summArea.setText(st2 + "\n\nTime: " + timeOfEvent2 + ". Goal scored by away team. Score is: " + userScore + "-" + oppScore);
+
                 break;
 
             case R.id.oppScoreDecButton:
                 if(oppScore > 0){
                     oppScore--;
                     oppSF.setText(String.valueOf(oppScore));
+                    String st4 = summArea.getText().toString();
+                    summArea.setText(st4 + "\nPrevious goal cancelled.  Score is: " + userScore + "-" + oppScore);
+
                     break;
                 }
                 else {
                     break;
                 }
-
+                
             case R.id.homeButton:
                 break;
         }
