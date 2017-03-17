@@ -82,9 +82,10 @@
             android:id="@+id/timeField" />
 
         <Spinner
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="43dp"
-            android:id="@+id/spinner2" />
-
+            android:layout_marginLeft="110dp"
+            android:gravity="center"
+            android:id="@+id/gameTimeSpinner" />
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

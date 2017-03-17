@@ -196,7 +196,6 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         ps39.setAdapter(adapter);
         ps40.setAdapter(adapter);
 
-
         readFromFile(getApplicationContext()); // DELETE THIS LINE ONCE DYNAMIC
     }
 

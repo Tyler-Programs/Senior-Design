@@ -164,7 +164,7 @@ public class ScoreboardActivity extends AppCompatActivity implements EditText.On
                 else {
                     break;
                 }
-                
+
             case R.id.homeButton:
                 break;
         }

@@ -68,8 +68,9 @@
             android:id="@+id/nameField" />
 
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
             android:inputType="textPersonName"
             android:text=""
             android:gravity="center"
@@ -85,8 +86,9 @@
             android:id="@+id/ageField" />
 
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
             android:inputType="number"
             android:gravity="center"
             android:ems="10"
@@ -101,8 +103,9 @@
             android:id="@+id/numberField" />
 
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
             android:inputType="number"
             android:gravity="center"
             android:ems="10"
@@ -117,8 +120,10 @@
             android:id="@+id/positionField" />
 
         <Spinner
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="43dp"
+            android:layout_marginLeft="120dp"
+            android:gravity="center"
             android:id="@+id/spinner" />
 
         <TextView
@@ -130,8 +135,9 @@
             android:id="@+id/gradeField" />
 
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
             android:inputType="number"
             android:gravity="center"
             android:ems="10"
