@@ -32,8 +32,10 @@ public class AddRosterActivity extends AppCompatActivity implements EditText.OnC
         apb = (Button) findViewById(R.id.addPlayerButton);
         addnamef = (EditText) findViewById(R.id.addNameField);
         addagef = (EditText) findViewById(R.id.addAgeField);
-        addnumf = (EditText) findViewById(R.id.addTimeField); // NOTE: THIS IS NAMED WRONG, ID IS HOOKED UP TO RIGHT COMPONENT THOUGH
+        addnumf = (EditText) findViewById(R.id.addNumberField); // NOTE: THIS IS NAMED WRONG, ID IS HOOKED UP TO RIGHT COMPONENT THOUGH
         addgradef = (EditText) findViewById(R.id.addGradeField);
+
+        posSpinner = (Spinner) findViewById(R.id.spinner);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.soccer_positions, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -48,7 +50,8 @@ public class AddRosterActivity extends AppCompatActivity implements EditText.OnC
         drb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AddRosterActivity.this, AddEventsActivity.class));
+                fileManager.createEventsFile(getApplicationContext());
+                startActivity(new Intent(AddRosterActivity.this, AddEventsActivity.class).putExtra("Team_Name",getTeamName()));
             }
         });
 
@@ -86,8 +89,12 @@ public class AddRosterActivity extends AppCompatActivity implements EditText.OnC
     private String getPlayerInfo(){
         String res="";
 
-        if(addnamef.getText().toString() != null || addnamef.getText().toString() != "")
+        if(addnamef.getText().toString() != null || addnamef.getText().toString() != "") {
+            //String[] tmp = new String[2];
+            //tmp = addnamef.getText().toString().split(" ");
+            //res += tmp[0] + "#" + tmp[1] + "#";
             res += addnamef.getText().toString()+"#";
+        }
         else
             res += "#";
         if(addagef.getText().toString() != null || addagef.getText().toString() != "")
