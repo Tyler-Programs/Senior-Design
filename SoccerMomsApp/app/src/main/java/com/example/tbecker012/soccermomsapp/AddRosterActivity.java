@@ -17,7 +17,7 @@ public class AddRosterActivity extends AppCompatActivity implements EditText.OnC
     public Button mmb, drb, apb;
     private FileManager fileManager;
     private EditText addnamef, addagef, addnumf, addgradef;
-    //public Spinner posSpinner;
+    public Spinner posSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,8 @@ public class AddRosterActivity extends AppCompatActivity implements EditText.OnC
         addagef = (EditText) findViewById(R.id.addAgeField);
         addnumf = (EditText) findViewById(R.id.addNumberField); // NOTE: THIS IS NAMED WRONG, ID IS HOOKED UP TO RIGHT COMPONENT THOUGH
         addgradef = (EditText) findViewById(R.id.addGradeField);
+
+        posSpinner = (Spinner) findViewById(R.id.spinner);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.soccer_positions, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -64,7 +66,7 @@ public class AddRosterActivity extends AppCompatActivity implements EditText.OnC
             }
         });
 
-        //posSpinner.setAdapter(adapter);
+        posSpinner.setAdapter(adapter);
     }
 
     @Override
