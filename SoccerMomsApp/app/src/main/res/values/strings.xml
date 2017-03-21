@@ -142,6 +142,7 @@
     <string name="title_activity_add_events">AddEventsActivity</string>
     <string name="title_activity_add_roster">AddRosterActivity</string>
     <string name="title_activity_team_preferences">TeamPreferencesActivity</string>
+    <string name="title_activity_share">ShareActivity</string>
 </resources>
 
 

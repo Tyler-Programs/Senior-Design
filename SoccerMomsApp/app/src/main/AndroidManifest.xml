@@ -58,6 +58,10 @@
         <activity
             android:name=".TeamPreferencesActivity"
             android:label="@string/title_activity_team_preferences"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ShareActivity"
+            android:label="@string/title_activity_share"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
