@@ -5,9 +5,11 @@ import android.os.Environment;
 import android.util.Log;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.List;
 
@@ -182,6 +184,55 @@ public class FileManager {
         // find the evtID in the Events.txt file and remove that line
     }
 
+    private boolean cleanFile(File f){
+        // read file line by line and remove any newlines found
+        String fileAsString="";
+
+        if(f != null) // check if the file is null
+        {
+            if(!f.isDirectory()) // make sure the file is not a directory
+            {
+                try {
+                    FileInputStream fis = new FileInputStream(f);
+                    byte[] data = new byte[(int) f.length()];
+                    fis.read(data); // read the whole file
+                    fis.close(); // close the file input stream
+
+                    fileAsString = new String(data, "UTF-8"); // get the string data
+                    fileAsString = fileAsString.replace("\n", ""); // replace the line with nothing
+                } catch(Exception e) {
+                    Log.e("ERROR","Could not create input stream.");
+                    e.printStackTrace();
+                    return false;
+                }
+                try {
+                    if(fileAsString.equals(null)) {
+                        Log.e("ERROR","Read not complete; string to write is null.");
+                        return false;
+                    }
+                    else { // everything is good
+                        FileOutputStream fos = new FileOutputStream(f, false); // open the file to rewrite ti (no append)
+                        fos.write(fileAsString.getBytes()); // write the results to the file
+                    }
+                }catch (Exception e){
+                    Log.e("ERROR","Could not create output stream.");
+                    e.printStackTrace();
+                    return false;
+                }
+            }
+            else
+            {
+                Log.e("ERROR","Provided file is a directory. Must be a file.");
+                return false;
+            }
+        }
+        else
+        {
+            Log.e("ERROR","provided file is null.");
+            return false;
+        }
+        return true;
+    }
 }
 
 
