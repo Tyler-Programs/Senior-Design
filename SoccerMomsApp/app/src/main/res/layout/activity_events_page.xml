@@ -1514,7 +1514,7 @@
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="130dp"
+                android:layout_width="110dp"
                 android:layout_height="match_parent">
 
                 <EditText
@@ -1934,358 +1934,359 @@
 
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="30dp"
+                android:layout_width="60dp"
                 android:layout_height="match_parent">
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton1"
-                    android:textSize="16dp" />
+                    android:textSize="14dp"
+                    android:onClick="launchMaps" />
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton2"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton3"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton4"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton5"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton6"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton7"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton8"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton9"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton10"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton11"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton12"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton13"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton14"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton15"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton16"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton17"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton18"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton19"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton20"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton21"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton22"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton23"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton24"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton25"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton26"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton27"
                     android:textSize="16dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton28"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton29"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton30"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton31"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton32"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton33"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton34"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton35"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton36"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton37"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton38"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton39"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton40"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton41"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton42"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton43"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton44"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton45"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton46"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton47"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton48"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton49"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
 
                 <Button
-                    android:text=""
+                    android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton50"
-                    android:textSize="16dp"/>
+                    android:textSize="14dp"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
