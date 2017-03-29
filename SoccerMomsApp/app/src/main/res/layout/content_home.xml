@@ -13,4 +13,22 @@
     tools:context="com.example.tbecker012.soccermomsapp.HomeActivity"
     tools:showIn="@layout/activity_home">
 
+    <Spinner
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/teamSelector"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="96dp" />
+
+    <TextView
+        android:text="Team:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/textView19"
+        android:layout_alignBottom="@+id/teamSelector"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp" />
+
 </RelativeLayout>

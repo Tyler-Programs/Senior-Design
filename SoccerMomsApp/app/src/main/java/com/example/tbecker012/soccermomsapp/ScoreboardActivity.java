@@ -61,7 +61,7 @@ public class ScoreboardActivity extends AppCompatActivity implements EditText.On
         hb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ScoreboardActivity.this, DirectoryActivity.class));
+                startActivity(new Intent(ScoreboardActivity.this, DirectoryActivity.class).putExtra("Team_Name",getTeamName()));
             }
         });
     }
@@ -314,6 +314,17 @@ public class ScoreboardActivity extends AppCompatActivity implements EditText.On
             pcdt.cancel();
             pcdt = null;
         }
+    }
+
+    private String getTeamName() // get the string sent from the TeamPreferencesActivity
+    {
+        String newString;
+        Bundle extras = getIntent().getExtras();
+        if(extras == null) // is there any strings
+            newString = null;
+        else
+            newString = extras.getString("Team_Name"); // retrieve the string
+        return newString;
     }
 
     public void updateGoalScorer(){

@@ -67,6 +67,12 @@
             android:layout_marginTop="25dp"
             android:id="@+id/eventsButton" />
 
+        <Button
+            android:text="share : tmp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button" />
+
     </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

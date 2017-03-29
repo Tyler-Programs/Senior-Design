@@ -43,7 +43,7 @@ public class AddRosterActivity extends AppCompatActivity implements EditText.OnC
         mmb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AddRosterActivity.this, DirectoryActivity.class));
+                startActivity(new Intent(AddRosterActivity.this, DirectoryActivity.class).putExtra("Team_Name",getTeamName()));
             }
         });
 

@@ -39,7 +39,7 @@ public class ShareActivity extends AppCompatActivity implements EditText.OnClick
         mmb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ShareActivity.this, DirectoryActivity.class));
+                startActivity(new Intent(ShareActivity.this, DirectoryActivity.class).putExtra("Team_Name",getTeamName()));
             }
         });
 
@@ -54,7 +54,7 @@ public class ShareActivity extends AppCompatActivity implements EditText.OnClick
         switch(v.getId()) {
             case R.id.rosterButton:
                 try {
-                    String filename = teamName + "Roster.txt"; // need the path here. GET TEAMNAME FROM BUNDLE FROM INTENT
+                    String filename = getTeamName() + "Roster.txt"; // need the path here. GET TEAMNAME FROM BUNDLE FROM INTENT
                     File fileLocation = new File(getFilesDir(), filename);
                     fileLocation.createNewFile();
                     writeToExternal(getApplicationContext(), filename);
@@ -100,5 +100,16 @@ public class ShareActivity extends AppCompatActivity implements EditText.OnClick
         } catch (Exception e) {
             Toast.makeText(context, "File write failed: " + e.getLocalizedMessage(), Toast.LENGTH_LONG).show(); //if there's an error, make a piece of toast and serve it up
         }
+    }
+
+    private String getTeamName() // get the string sent from the TeamPreferencesActivity
+    {
+        String newString;
+        Bundle extras = getIntent().getExtras();
+        if(extras == null) // is there any strings
+            newString = null;
+        else
+            newString = extras.getString("Team_Name"); // retrieve the string
+        return newString;
     }
 }

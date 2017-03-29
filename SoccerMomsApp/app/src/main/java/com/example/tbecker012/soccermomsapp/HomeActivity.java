@@ -9,7 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -17,6 +19,7 @@ import java.io.FileFilter;
 public class HomeActivity extends AppCompatActivity {
     public Button vtb, atb;
     public String selectedTeam; // for multiple team support
+    public Spinner teamSelector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,18 +32,22 @@ public class HomeActivity extends AppCompatActivity {
     public void init() {
         vtb = (Button) findViewById(R.id.viewTeamButton);
         atb = (Button) findViewById(R.id.addTeamButton);
+        teamSelector = (Spinner) findViewById(R.id.teamSelector);
+
+        teamSelector.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getTeamNames())); // set the dynamic list to the spinner
 
         vtb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, DirectoryActivity.class));
+                Log.e("test", "homeactivity:  cur team: "+ getSelectedTeam());
+                startActivity(new Intent(HomeActivity.this, DirectoryActivity.class).putExtra("Team_Name",getSelectedTeam()));
             }
         });
 
         atb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, TeamPreferencesActivity.class));
+                startActivity(new Intent(HomeActivity.this, TeamPreferencesActivity.class).putExtra("Team_Name", getSelectedTeam())); // selected from the spinner
             }
         });
 
@@ -67,5 +74,11 @@ public class HomeActivity extends AppCompatActivity {
         }
 
         return res;
+    }
+
+    private String getSelectedTeam()
+    {
+        // get the selected team from the spinner
+        return teamSelector.getSelectedItem().toString();
     }
 }

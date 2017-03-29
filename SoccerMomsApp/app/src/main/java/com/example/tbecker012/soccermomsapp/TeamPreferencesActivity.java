@@ -41,7 +41,7 @@ public class TeamPreferencesActivity extends AppCompatActivity implements EditTe
         mmb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(TeamPreferencesActivity.this, DirectoryActivity.class));
+                startActivity(new Intent(TeamPreferencesActivity.this, DirectoryActivity.class).putExtra("Team_Name",getTeamName()));
             }
         });
 
@@ -52,7 +52,7 @@ public class TeamPreferencesActivity extends AppCompatActivity implements EditTe
                 FileManager fileManager = new FileManager(teamName); // create a file manager with that team name
                 fileManager.createDirectory(getApplicationContext()); // create the directory
                 fileManager.createRosterFile(getApplicationContext()); // create the roster text file
-                startActivity(new Intent(TeamPreferencesActivity.this, AddRosterActivity.class).putExtra("Team_Name",teamName));
+                startActivity(new Intent(TeamPreferencesActivity.this, AddRosterActivity.class).putExtra("Team_Name",getTeamName()));
             }
         });
         gts.setAdapter(adapter);
@@ -61,5 +61,16 @@ public class TeamPreferencesActivity extends AppCompatActivity implements EditTe
     @Override
     public void onClick(View v) {
 
+    }
+
+    private String getTeamName() // get the string sent from the TeamPreferencesActivity
+    {
+        String newString;
+        Bundle extras = getIntent().getExtras();
+        if(extras == null) // is there any strings
+            newString = null;
+        else
+            newString = extras.getString("Team_Name"); // retrieve the string
+        return newString;
     }
 }

@@ -51,6 +51,15 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         /*
         Delete below once dynamic
          */
+
+        /******
+         * TESTING
+         */
+
+        Log.e("test","cur team: "+getTeamName());
+        /*********
+        *
+         */
         nf1 = (EditText) findViewById(R.id.nameField1);
         nf2 = (EditText) findViewById(R.id.nameField2);
         nf3 = (EditText) findViewById(R.id.nameField3);
@@ -134,7 +143,7 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         ab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RosterPageActivity.this, AddRosterActivity.class));
+                startActivity(new Intent(RosterPageActivity.this, AddRosterActivity.class).putExtra("Team_Name",getTeamName()));
             }
         });
 
@@ -151,7 +160,7 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         hb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RosterPageActivity.this, DirectoryActivity.class));
+                startActivity(new Intent(RosterPageActivity.this, DirectoryActivity.class).putExtra("Team_Name",getTeamName()));
             }
         });
 
@@ -215,7 +224,7 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         String ret = "";
 
         try {
-            File myFile = new File("" + context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + "Team1"), "Team1" + "Roster.txt"); // replace 'Team1' with teamName once dynamic
+            File myFile = new File("" + context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + getTeamName()), getTeamName() + "Roster.txt"); // replace 'Team1' with teamName once dynamic
             FileInputStream in = new FileInputStream(myFile);
             String[] data = new String[6];
 
@@ -226,41 +235,47 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
                 /*
                 Loop once dynamic
                  */
-                ret = bufferedReader.readLine();
-                data = ret.split("#");
-                nf1.setText(data[0]); // first and last name
-                af1.setText(data[1]);
-                numf1.setText(data[2]);
-                ps1.setSelection(1);
-                gf1.setText(data[4]);
-                ret = bufferedReader.readLine();
-                data = ret.split("#");
-                nf2.setText(data[0]); // first and last name
-                af2.setText(data[1]);
-                numf2.setText(data[2]);
-                ps2.setSelection(1);
-                gf2.setText(data[4]);
-                ret = bufferedReader.readLine();
-                data = ret.split("#");
-                nf3.setText(data[0]); // first and last name
-                ps3.setSelection(1);
-                af3.setText(data[1]);
-                numf3.setText(data[2]);
-                gf3.setText(data[4]);
-                ret = bufferedReader.readLine();
-                data = ret.split("#");
-                nf4.setText(data[0]); // first and last name
-                ps4.setSelection(1);
-                af4.setText(data[1]);
-                numf4.setText(data[2]);
-                gf4.setText(data[4]);
-                ret = bufferedReader.readLine();
-                data = ret.split("#");
-                nf5.setText(data[0]); // first and last name
-                af5.setText(data[1]);
-                numf5.setText(data[2]);
-                ps5.setSelection(1);
-                gf5.setText(data[4]);
+                try {
+                    ret = bufferedReader.readLine();
+                    data = ret.split("#");
+                    nf1.setText(data[0]); // first and last name
+                    af1.setText(data[1]);
+                    numf1.setText(data[2]);
+                    ps1.setSelection(1);
+                    gf1.setText(data[4]);
+                    ret = bufferedReader.readLine();
+                    data = ret.split("#");
+                    nf2.setText(data[0]); // first and last name
+                    af2.setText(data[1]);
+                    numf2.setText(data[2]);
+                    ps2.setSelection(1);
+                    gf2.setText(data[4]);
+                    ret = bufferedReader.readLine();
+                    data = ret.split("#");
+                    nf3.setText(data[0]); // first and last name
+                    ps3.setSelection(1);
+                    af3.setText(data[1]);
+                    numf3.setText(data[2]);
+                    gf3.setText(data[4]);
+                    ret = bufferedReader.readLine();
+                    data = ret.split("#");
+                    nf4.setText(data[0]); // first and last name
+                    ps4.setSelection(1);
+                    af4.setText(data[1]);
+                    numf4.setText(data[2]);
+                    gf4.setText(data[4]);
+                    ret = bufferedReader.readLine();
+                    data = ret.split("#");
+                    nf5.setText(data[0]); // first and last name
+                    af5.setText(data[1]);
+                    numf5.setText(data[2]);
+                    ps5.setSelection(1);
+                    gf5.setText(data[4]);
+                } catch (Exception e)
+                {
+                    e.printStackTrace();
+                    Log.e("test","could not write roster list");
+                }
                 /*
                 ^^^^^^^^^^^^^^^^^^^^^^^^^
                  */
@@ -274,5 +289,16 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         }
 
        // return ret; // return used to be String
+    }
+
+    private String getTeamName() // get the string sent from the TeamPreferencesActivity
+    {
+        String newString;
+        Bundle extras = getIntent().getExtras();
+        if(extras == null) // is there any strings
+            newString = null;
+        else
+            newString = extras.getString("Team_Name"); // retrieve the string
+        return newString;
     }
 }

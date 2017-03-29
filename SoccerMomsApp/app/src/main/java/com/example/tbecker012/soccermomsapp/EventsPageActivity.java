@@ -99,7 +99,7 @@ public class EventsPageActivity extends AppCompatActivity implements Button.OnCl
                     // loop through each row
                     break;
                 case R.id.mainMenuButton:
-                    startActivity(new Intent(EventsPageActivity.this, DirectoryActivity.class));
+                    startActivity(new Intent(EventsPageActivity.this, DirectoryActivity.class).putExtra("Team_Name",getTeamName()));
                     break;
                 case R.id.searchButton1:
                     launchMaps(v, af1.getText().toString());
@@ -148,7 +148,7 @@ public class EventsPageActivity extends AppCompatActivity implements Button.OnCl
             String ret;
 
             try {
-                File myFile = new File("" + context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + "Team1"), "Team1" + "Events.txt"); // replace 'Team1' with teamName once dynamic
+                File myFile = new File("" + context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + getTeamName()), getTeamName() + "Events.txt");
                 FileInputStream in = new FileInputStream(myFile);
                 String[] data = new String[5];
 
@@ -156,31 +156,37 @@ public class EventsPageActivity extends AppCompatActivity implements Button.OnCl
                     InputStreamReader inputStreamReader = new InputStreamReader(in);
                     BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 
+                    try {
                 /*
                 Loop once dynamic
                  */
-                    ret = bufferedReader.readLine();
-                    data = ret.split("#");
-                    nf1.setText(data[1]); //name field
-                    df1.setText(data[2]); // date field
-                    tf1.setText(data[3]); // time field
-                    af1.setText(data[4]); // address field
-                    ret = bufferedReader.readLine();
-                    data = ret.split("#");
-                    nf2.setText(data[1]); //name field
-                    df2.setText(data[2]); // date field
-                    tf2.setText(data[3]); // time field
-                    af2.setText(data[4]); // address field
-                    ret = bufferedReader.readLine();
-                    data = ret.split("#");
-                    nf3.setText(data[1]); //name field
-                    df3.setText(data[2]); // date field
-                    tf3.setText(data[3]); // time field
-                    af3.setText(data[4]); // address field
+                        ret = bufferedReader.readLine();
+                        data = ret.split("#");
+                        nf1.setText(data[1]); //name field
+                        df1.setText(data[2]); // date field
+                        tf1.setText(data[3]); // time field
+                        af1.setText(data[4]); // address field
+                        ret = bufferedReader.readLine();
+                        data = ret.split("#");
+                        nf2.setText(data[1]); //name field
+                        df2.setText(data[2]); // date field
+                        tf2.setText(data[3]); // time field
+                        af2.setText(data[4]); // address field
+                        ret = bufferedReader.readLine();
+                        data = ret.split("#");
+                        nf3.setText(data[1]); //name field
+                        df3.setText(data[2]); // date field
+                        tf3.setText(data[3]); // time field
+                        af3.setText(data[4]); // address field
 
                 /*
                 ^^^^^^^^^^^^^^^^^^^^^^^^^
                  */
+                    } catch (Exception e)
+                    {
+                        Log.e("test","EventsPageActivity:  could not write all events");
+                        e.printStackTrace();
+                    }
 
                     in.close();
                 }
@@ -192,4 +198,15 @@ public class EventsPageActivity extends AppCompatActivity implements Button.OnCl
 
             // return ret; // return used to be String
         }
+
+    private String getTeamName() // get the string sent from the TeamPreferencesActivity
+    {
+        String newString;
+        Bundle extras = getIntent().getExtras();
+        if(extras == null) // is there any strings
+            newString = null;
+        else
+            newString = extras.getString("Team_Name"); // retrieve the string
+        return newString;
+    }
 }

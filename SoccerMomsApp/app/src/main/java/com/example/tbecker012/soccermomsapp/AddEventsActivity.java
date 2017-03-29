@@ -60,14 +60,14 @@ public class AddEventsActivity extends AppCompatActivity implements EditText.OnC
         mmb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AddEventsActivity.this, DirectoryActivity.class));
+                startActivity(new Intent(AddEventsActivity.this, DirectoryActivity.class).putExtra("Team_Name",getTeamName()));
             }
         });
 
         db.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AddEventsActivity.this, DirectoryActivity.class));
+                startActivity(new Intent(AddEventsActivity.this, DirectoryActivity.class).putExtra("Team_Name",getTeamName()));
             }
         });
     }
