@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:layout_marginLeft="90dp"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="100dp"
         android:ems="10"
         android:gravity="center"
         android:id="@+id/emailField" />
@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="145dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="150dp"
         android:id="@+id/rosterButton" />
 
     <Button
@@ -54,6 +54,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="520dp"
         android:id="@+id/homeButton" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="309dp"
+        android:inputType="textMultiLine"
+        android:text="Once you have successfully received the emailed roster: \n\n(1) Plug your smartphone into your computer using the USB cord.\n(2) Open Windows Explorer on your computer.\n(3) On the left-side of your screen, click on the 'Downloads' folder.\n(4) Find the roster.txt file, right-click on it, and select 'Copy.'\n(5) On the left-side of your screen, open 'My Computer','This PC', etc.\n(6) In this directory, you should see a link to your Samsung Device.  Click on it.\n(7) Double-click on 'Phone,' then 'My Documents.'  Press Ctrl+V on your keyboard.\n(8) Your app will now be able to find the roster file and import it into your team's profile."
+        android:layout_marginTop="200dp"
+        android:textSize="14dp"
+        android:gravity="center"
+        android:ems="10"
+        android:id="@+id/editText" />
 
     <include layout="@layout/content_share"
         android:id="@+id/include2" />
