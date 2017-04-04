@@ -42,11 +42,17 @@ public class ScoreboardActivity extends AppCompatActivity implements EditText.On
 
         userSF = (EditText) findViewById(R.id.userScoreField);
         oppSF = (EditText) findViewById(R.id.oppScoreField);
+
+        userSF.setEnabled(false);
+        oppSF.setEnabled(false);
+
         gcMinutes = (EditText) findViewById(R.id.gcMinField);
         gcSeconds = (EditText) findViewById(R.id.gcSecField);
         pcMinutes = (EditText) findViewById(R.id.pcMinField);
         pcSeconds = (EditText) findViewById(R.id.pcSecField);
         summArea = (EditText) findViewById(R.id.summaryArea);
+
+        summArea.setEnabled(false);
 
         usib.setOnClickListener(this);
         usdb.setOnClickListener(this);
