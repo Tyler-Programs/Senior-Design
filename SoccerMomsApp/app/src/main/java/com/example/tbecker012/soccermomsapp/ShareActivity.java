@@ -23,7 +23,7 @@ import java.io.OutputStream;
 
 public class ShareActivity extends AppCompatActivity implements EditText.OnClickListener {
     public Button rb, mmb;
-    public EditText ef;
+    public EditText ef, sm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,9 @@ public class ShareActivity extends AppCompatActivity implements EditText.OnClick
         rb = (Button) findViewById(R.id.rosterButton);
         mmb = (Button) findViewById(R.id.homeButton);
         ef = (EditText) findViewById(R.id.emailField);
+        sm = (EditText) findViewById(R.id.editText);
+
+        sm.setEnabled(false);
 
         mmb.setOnClickListener(new View.OnClickListener() {
             @Override

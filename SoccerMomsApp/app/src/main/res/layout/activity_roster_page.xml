@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.tbecker012.soccermomsapp.RosterPageActivity">
+    tools:context="com.example.tbecker012.soccermomsapp.RosterPageActivity"
+    android:background="@android:color/holo_green_light">
 
     <TextView
         android:text="           Team Roster"
@@ -19,14 +20,14 @@
     <Button
         android:text="Main Menu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginTop="515dp"
         android:id="@+id/homeButton" />
 
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="460dp"
+        android:layout_height="380dp"
         android:layout_marginTop="115dp"
         android:orientation="vertical">
 

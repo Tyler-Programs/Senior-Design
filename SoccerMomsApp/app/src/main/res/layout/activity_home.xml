@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.tbecker012.soccermomsapp.HomeActivity">
+    tools:context="com.example.tbecker012.soccermomsapp.HomeActivity"
+    android:background="@android:color/holo_green_light">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
