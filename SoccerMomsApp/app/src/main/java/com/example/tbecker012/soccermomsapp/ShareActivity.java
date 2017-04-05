@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -54,7 +55,8 @@ public class ShareActivity extends AppCompatActivity implements EditText.OnClick
         switch(v.getId()) {
             case R.id.rosterButton:
                 try {
-                    String filename = getTeamName() + "Roster.txt"; // need the path here. GET TEAMNAME FROM BUNDLE FROM INTENT
+                    Log.e("TESTING","cur team: "+getTeamName());
+                    String filename = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + getTeamName()) + "Roster.txt"; // need the path here. GET TEAMNAME FROM BUNDLE FROM INTENT
                     File fileLocation = new File(getFilesDir(), filename);
                     fileLocation.createNewFile();
                     writeToExternal(getApplicationContext(), filename);

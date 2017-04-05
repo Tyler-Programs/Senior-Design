@@ -110,7 +110,7 @@ public class EventsPageActivity extends AppCompatActivity implements Button.OnCl
                 case R.id.searchButton3:
                     launchMaps(v, af3.getText().toString());
                     break;
-
+                default:
             }
 
         }

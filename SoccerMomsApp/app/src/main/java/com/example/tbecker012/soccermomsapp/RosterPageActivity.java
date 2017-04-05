@@ -4,10 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -21,7 +18,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class RosterPageActivity extends AppCompatActivity implements EditText.OnClickListener{
@@ -1351,20 +1347,19 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
                 /*
                 Loop once dynamic
                  */
-<<<<<<< HEAD
                 try {
                     ret = bufferedReader.readLine();
                     data = ret.split("#");
                     nf1.setText(data[0]); // first and last name
                     af1.setText(data[1]);
-                    numf1.setText(data[2]);
+                    nuf1.setText(data[2]);
                     ps1.setSelection(1);
                     gf1.setText(data[4]);
                     ret = bufferedReader.readLine();
                     data = ret.split("#");
                     nf2.setText(data[0]); // first and last name
                     af2.setText(data[1]);
-                    numf2.setText(data[2]);
+                    nuf2.setText(data[2]);
                     ps2.setSelection(1);
                     gf2.setText(data[4]);
                     ret = bufferedReader.readLine();
@@ -1372,20 +1367,20 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
                     nf3.setText(data[0]); // first and last name
                     ps3.setSelection(1);
                     af3.setText(data[1]);
-                    numf3.setText(data[2]);
+                    nuf3.setText(data[2]);
                     gf3.setText(data[4]);
                     ret = bufferedReader.readLine();
                     data = ret.split("#");
                     nf4.setText(data[0]); // first and last name
                     ps4.setSelection(1);
                     af4.setText(data[1]);
-                    numf4.setText(data[2]);
+                    nuf4.setText(data[2]);
                     gf4.setText(data[4]);
                     ret = bufferedReader.readLine();
                     data = ret.split("#");
                     nf5.setText(data[0]); // first and last name
                     af5.setText(data[1]);
-                    numf5.setText(data[2]);
+                    nuf5.setText(data[2]);
                     ps5.setSelection(1);
                     gf5.setText(data[4]);
                 } catch (Exception e)
@@ -1393,8 +1388,8 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
                     e.printStackTrace();
                     Log.e("test","could not write roster list");
                 }
-=======
-                ret = bufferedReader.readLine();
+
+               /*ret = bufferedReader.readLine();
                 data = ret.split("#");
                 nf1.setText(data[0]); // first and last name
                 af1.setText(data[1]);
@@ -1428,11 +1423,8 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
                 af5.setText(data[1]);
                 nuf5.setText(data[2]);
                 ps5.setSelection(1);
-                gf5.setText(data[4]);
->>>>>>> origin/tyler-branch
-                /*
-                ^^^^^^^^^^^^^^^^^^^^^^^^^
-                 */
+                gf5.setText(data[4]);*/
+
 
                 in.close();
             }
@@ -1445,17 +1437,18 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
        // return ret; // return used to be String
     }
 
-<<<<<<< HEAD
+
     private String getTeamName() // get the string sent from the TeamPreferencesActivity
     {
         String newString;
         Bundle extras = getIntent().getExtras();
-        if(extras == null) // is there any strings
+        if (extras == null) // is there any strings
             newString = null;
         else
             newString = extras.getString("Team_Name"); // retrieve the string
         return newString;
-=======
+    }
+
     public void reset_text(EditText destName, EditText sourceName, EditText destAge, EditText sourceAge, EditText destNum, EditText sourceNum, Spinner destPos, Spinner sourcePos, EditText destGrade, EditText sourceGrade) {
         if (destName.getText().toString().isEmpty() && destAge.getText().toString().isEmpty() && destGrade.getText().toString().isEmpty()) {
 
@@ -1495,6 +1488,6 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
             }
 
         }
->>>>>>> origin/tyler-branch
+//>>>>>>> origin/tyler-branch
     }
 }
