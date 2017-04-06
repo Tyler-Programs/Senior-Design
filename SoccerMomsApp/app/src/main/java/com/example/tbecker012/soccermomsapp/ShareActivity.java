@@ -59,12 +59,8 @@ public class ShareActivity extends AppCompatActivity implements EditText.OnClick
             case R.id.rosterButton:
                 try {
                     Log.e("TESTING","cur team: "+getTeamName());
-                    String filename = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + getTeamName()) + "Roster.txt"; // need the path here. GET TEAMNAME FROM BUNDLE FROM INTENT
-                    File fileLocation = new File(getFilesDir(), filename);
-                    fileLocation.createNewFile();
-                    writeToExternal(getApplicationContext(), filename);
-
-                    fileLocation = new File(getApplicationContext().getExternalFilesDir(null), filename);
+                    String filename = getApplicationContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + getTeamName()) + "Roster.txt";
+                    File fileLocation = new File("" + getApplicationContext().getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + getTeamName()), getTeamName() + "Roster.txt");
                     fileLocation.createNewFile();
                     Uri path = Uri.fromFile(fileLocation);
                     Intent emailIntent = new Intent(Intent.ACTION_SEND);
@@ -87,7 +83,7 @@ public class ShareActivity extends AppCompatActivity implements EditText.OnClick
                 break;
         }
     }
-
+/*
     public void writeToExternal(Context context, String filename){
         try {
             File file = new File(context.getExternalFilesDir(null), filename); //Get file location from external source
@@ -105,7 +101,7 @@ public class ShareActivity extends AppCompatActivity implements EditText.OnClick
         } catch (Exception e) {
             Toast.makeText(context, "File write failed: " + e.getLocalizedMessage(), Toast.LENGTH_LONG).show(); //if there's an error, make a piece of toast and serve it up
         }
-    }
+    }*/
 
     private String getTeamName() // get the string sent from the TeamPreferencesActivity
     {

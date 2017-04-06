@@ -35,7 +35,7 @@ public class DirectoryActivity extends AppCompatActivity implements EditText.OnC
         rb = (Button) findViewById(R.id.rosterButton);
         sb = (Button) findViewById(R.id.statsButton);
         eb = (Button) findViewById(R.id.eventsButton);
-        tmpbutton = (Button) findViewById(R.id.button);
+        //tmpbutton = (Button) findViewById(R.id.button);
 
         hb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +62,8 @@ public class DirectoryActivity extends AppCompatActivity implements EditText.OnC
         sb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
+                startActivity(new Intent(DirectoryActivity.this, ShareActivity.class).putExtra("Team_Name",getTeamName()));
+                /*try {
                     h = DateFormat.format("MM-dd-yyyyy-h-mmssaa", System.currentTimeMillis()).toString();
                     // this will create a new name everytime and unique
                     File root = new File(Environment.getExternalStorageDirectory(), "Notes");
@@ -81,7 +82,8 @@ public class DirectoryActivity extends AppCompatActivity implements EditText.OnC
                 } catch (IOException e) {
                     et5.setText(e.getMessage().toString());
                     e.printStackTrace();
-                }            }
+                }            */
+            }
         });
 
         eb.setOnClickListener(new View.OnClickListener() {
@@ -91,12 +93,12 @@ public class DirectoryActivity extends AppCompatActivity implements EditText.OnC
             }
         });
 
-        tmpbutton.setOnClickListener(new View.OnClickListener() {
+        /*tmpbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(DirectoryActivity.this, ShareActivity.class).putExtra("Team_Name",getTeamName()));
             }
-        });
+        });*/
 
     }
 

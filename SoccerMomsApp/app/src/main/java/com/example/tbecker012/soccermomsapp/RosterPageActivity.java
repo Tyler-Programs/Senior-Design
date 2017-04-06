@@ -19,6 +19,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class RosterPageActivity extends AppCompatActivity implements EditText.OnClickListener{
     public Button hb, ub, ab, cb1, cb2, cb3, cb4, cb5, cb6, cb7, cb8, cb9, cb10, cb11, cb12, cb13, cb14, cb15, cb16, cb17, cb18, cb19, cb20, cb21, cb22, cb23, cb24, cb25, cb26, cb27, cb28, cb29, cb30, cb31, cb32, cb33, cb34, cb35, cb36, cb37, cb38, cb39, cb40;
@@ -310,6 +312,7 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         ub.setOnClickListener(this);
+        cb1.setOnClickListener(this);
 
         ab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -318,7 +321,7 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
             }
         });
 
-        cb1.setOnClickListener(new View.OnClickListener() {
+        /*cb1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (FileHelper.saveToFile( nf1.getText().toString())){
@@ -327,7 +330,7 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
                     Toast.makeText(RosterPageActivity.this,"Error save file!!!",Toast.LENGTH_SHORT).show();
                 }
             }
-        });
+        });*/
 
         hb.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -387,6 +390,12 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
                 break;
 
             case R.id.updateButton:
+                // get the data
+                // call rewriteRoster from filemanager
+
+                FileManager fileManager = new FileManager(getTeamName());
+                fileManager.rewriteRoster(getRosterData(), getApplicationContext());
+
                 break;
 
             case R.id.clearButton1:
@@ -1354,6 +1363,8 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
                     af1.setText(data[1]);
                     nuf1.setText(data[2]);
                     ps1.setSelection(1);
+                    Log.e("TEST",ps1.getAdapter().getItem(1).toString());
+                    Log.e("TEST","cur pos: "+ps1.getSelectedItem().toString());
                     gf1.setText(data[4]);
                     ret = bufferedReader.readLine();
                     data = ret.split("#");
@@ -1488,6 +1499,55 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
             }
 
         }
-//>>>>>>> origin/tyler-branch
+    }
+
+
+    public ArrayList<String> getRosterData()
+    {
+        ArrayList<String> list = new ArrayList<>();
+
+        // loop to get player info. If an entire row is empty, that is the last row. Currently done up to 5 rows.
+        if(nf1.getText().toString() == af1.getText().toString() && nuf1.getText().toString() == gf1.getText().toString() && gf1.getText().toString() == "") // if every entry is empty
+        {
+            // add nothing
+            return list;
+        }
+        else {
+            list.add(nf1.getText().toString() + "#" + af1.getText().toString() + "#" + nuf1.getText().toString() + "#" + ps1.getSelectedItem().toString() + "#" + gf1.getText().toString());
+        }
+        if(nf2.getText().toString() == af2.getText().toString() && nuf2.getText().toString() == gf2.getText().toString() && gf2.getText().toString() == "") // if every entry is empty
+        {
+            // add nothing
+            return list;
+        }
+        else {
+            list.add(nf2.getText().toString() + "#" + af2.getText().toString() + "#" + nuf2.getText().toString() + "#" + ps2.getSelectedItem().toString() + "#" + gf2.getText().toString());
+        }
+        if(nf3.getText().toString() == af3.getText().toString() && nuf3.getText().toString() == gf3.getText().toString() && gf3.getText().toString() == "") // if every entry is empty
+        {
+            // add nothing
+            return list;
+        }
+        else {
+            list.add(nf3.getText().toString() + "#" + af3.getText().toString() + "#" + nuf3.getText().toString() + "#" + ps3.getSelectedItem().toString() + "#" + gf3.getText().toString());
+        }
+        if(nf4.getText().toString() == af4.getText().toString() && nuf4.getText().toString() == gf4.getText().toString() && gf4.getText().toString() == "") // if every entry is empty
+        {
+            // add nothing
+            return list;
+        }
+        else {
+            list.add(nf4.getText().toString() + "#" + af4.getText().toString() + "#" + nuf4.getText().toString() + "#" + ps4.getSelectedItem().toString() + "#" + gf4.getText().toString());
+        }
+        if(nf5.getText().toString() == af5.getText().toString() && nuf5.getText().toString() == gf5.getText().toString() && gf5.getText().toString() == "") // if every entry is empty
+        {
+            // add nothing
+            return list;
+        }
+        else {
+            list.add(nf5.getText().toString() + "#" + af5.getText().toString() + "#" + nuf5.getText().toString() + "#" + ps5.getSelectedItem().toString() + "#" + gf5.getText().toString());
+        }
+
+        return list;
     }
 }

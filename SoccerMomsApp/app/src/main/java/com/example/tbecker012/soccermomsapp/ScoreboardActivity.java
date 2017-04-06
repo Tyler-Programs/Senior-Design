@@ -47,6 +47,7 @@ public class ScoreboardActivity extends AppCompatActivity implements EditText.On
         oppSF.setEnabled(false);
 
         gcMinutes = (EditText) findViewById(R.id.gcMinField);
+        gcMinutes.setText(new FileManager(getTeamName()).getPreferredTime(getApplicationContext())); // set the preferred time
         gcSeconds = (EditText) findViewById(R.id.gcSecField);
         pcMinutes = (EditText) findViewById(R.id.pcMinField);
         pcSeconds = (EditText) findViewById(R.id.pcSecField);

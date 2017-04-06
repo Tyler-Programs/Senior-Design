@@ -11,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -56,7 +57,7 @@ public class FileManager {
         }
     }
 
-    public void createRosterFile(Context context)
+    public File createRosterFile(Context context)
     {
         // check if sd card exists
         if (android.os.Environment.getExternalStorageState().equals(
@@ -69,6 +70,7 @@ public class FileManager {
                     FileOutputStream out = new FileOutputStream(newFile); // open the file for writing
                     out.write("".getBytes()); // write nothing to the file
                     out.close(); // close the file when done writing
+                    return newFile;
                 } catch (Exception e) {
                     Log.e("error", "Problem creating file");
                     e.printStackTrace();
@@ -82,6 +84,7 @@ public class FileManager {
         else{
             Log.e("error", "SD Card not found");
         }
+        return null;
     }
 
     public File createEventsFile(Context context)
@@ -114,6 +117,36 @@ public class FileManager {
         return null;
     }
 
+
+    public File createPreferencesFile(Context context, String time)
+    {
+        // check if sd card exists
+        if (android.os.Environment.getExternalStorageState().equals(
+                android.os.Environment.MEDIA_MOUNTED)) {
+            File newFile = new File("" + context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + teamName), teamName + "Preferences.txt");
+            if (!newFile.exists()) { // if the team has not been created already
+                try {
+                    newFile.createNewFile(); // create it as a file
+                    Log.e("TESTING", "File created successfully");
+                    FileOutputStream out = new FileOutputStream(newFile); // open the file for writing
+                    out.write(time.getBytes()); // write nothing to the file
+                    out.close(); // close the file when done writing
+                    return newFile;
+                } catch (Exception e) {
+                    Log.e("TESTING", "Problem creating file");
+                    e.printStackTrace();
+                }
+            } else if (newFile.exists()) { // the team has already been created
+                Log.e("TESTING", "Preferences file already created for: " + teamName);
+                //Toast t = Toast.makeText(context, "That file already exists.", Toast.LENGTH_LONG);
+                //t.show();
+            }
+        }
+        else{
+            Log.e("error", "SD Card not found");
+        }
+        return null;
+    }
 
     public void addPlayer(String data, Context context)
     {
@@ -151,6 +184,31 @@ public class FileManager {
             {
                 out.write(data.indexOf(i)); // write each new event
                 out.write("\n".getBytes()); // write a new line after the event
+            }
+            out.close(); // close the file when done writing
+            return true; // successfully written
+        }catch(Exception e){
+            Log.e("error","Error rewriting events file");
+            e.printStackTrace();
+        }
+
+        return false; // could not write properly
+    }
+
+    public boolean rewriteRoster(ArrayList<String> data, Context context){
+        try {
+            File oldFile = new File("" + context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + teamName), teamName + "Roster.txt"); // get the current roster file
+            oldFile.renameTo(new File("" + context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + teamName), teamName + "Roster-old.txt")); // rename the file to  "...-old.txt"
+            //createEventsFile(context); // create the new file
+            File newFile = createRosterFile(context);
+
+            //File newFile = createEventsFile(context); // create the new events file
+            FileOutputStream out = new FileOutputStream(newFile, false); // create the write stream w/o append
+            for(int i=0;i<data.size();i++) // loop the size of the list
+            {
+                Log.e("TESTING","data value: "+data.get(i));
+                out.write(data.get(i).getBytes()); // write each new player
+                out.write("\n".getBytes()); // write a new line after the player
             }
             out.close(); // close the file when done writing
             return true; // successfully written
@@ -234,6 +292,28 @@ public class FileManager {
         return true;
     }
 
+    public String getPreferredTime(Context context)
+    {
+        try {
+            File myFile = new File("" + context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + teamName), teamName + "Preferences.txt");
+            FileInputStream in = new FileInputStream(myFile);
+            String[] data;
+
+            if (in != null) { // Name#Age#Player Number#Position#Grade
+                InputStreamReader inputStreamReader = new InputStreamReader(in);
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+                return bufferedReader.readLine();
+            }
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+
+            return "error";
+        }
+
+        return "failed";
+    }
 
 }
 

@@ -27,6 +27,7 @@ public class AddRosterActivity extends AppCompatActivity implements EditText.OnC
     }
 
     public void init(){
+        fileManager = new FileManager(getTeamName());
         mmb = (Button) findViewById(R.id.mainMenuButton);
         drb = (Button) findViewById(R.id.doneRosterButton);
         apb = (Button) findViewById(R.id.addPlayerButton);
@@ -50,8 +51,13 @@ public class AddRosterActivity extends AppCompatActivity implements EditText.OnC
         drb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fileManager.createEventsFile(getApplicationContext());
-                startActivity(new Intent(AddRosterActivity.this, AddEventsActivity.class).putExtra("Team_Name",getTeamName()));
+                try {
+                    fileManager.createEventsFile(getApplicationContext());
+                    startActivity(new Intent(AddRosterActivity.this, AddEventsActivity.class).putExtra("Team_Name", getTeamName()));
+                } catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
             }
         });
 
