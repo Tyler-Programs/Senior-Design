@@ -67,6 +67,7 @@ public class ScoreboardActivity extends AppCompatActivity implements EditText.On
         hb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                moveTaskToBack(true);
                 startActivity(new Intent(ScoreboardActivity.this, DirectoryActivity.class));
             }
         });
