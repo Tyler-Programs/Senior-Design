@@ -225,7 +225,8 @@ public class FileManager {
         /*
         data in format: eventID#address/n
          */
-        try{
+
+        try{ // write the events to the file
             File newFile = new File("" + context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + teamName), teamName + "Events.txt"); // get the file
             FileOutputStream out = new FileOutputStream(newFile, true); //open file with appending option
             out.write(data.getBytes());

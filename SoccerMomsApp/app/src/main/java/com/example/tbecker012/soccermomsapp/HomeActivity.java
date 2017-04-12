@@ -47,7 +47,7 @@ public class HomeActivity extends AppCompatActivity {
         atb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this, TeamPreferencesActivity.class).putExtra("Team_Name", getSelectedTeam())); // selected from the spinner
+                startActivity(new Intent(HomeActivity.this, TeamPreferencesActivity.class)); // selected from the spinner
             }
         });
 

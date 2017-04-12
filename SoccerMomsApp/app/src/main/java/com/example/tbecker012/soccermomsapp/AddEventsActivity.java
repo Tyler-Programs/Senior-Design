@@ -16,6 +16,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.provider.CalendarContract.*;
+
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -97,6 +99,37 @@ public class AddEventsActivity extends AppCompatActivity implements EditText.OnC
 
     private long writeToCalendar()
     {
+        long eventID = -1;
+        long calID = 3;
+        long startMillis = 0;
+        long endMillis = 0;
+        Calendar beginTime = Calendar.getInstance();
+        beginTime.set(2017, 9, 14, 7, 30);
+        startMillis = beginTime.getTimeInMillis();
+        Calendar endTime = Calendar.getInstance();
+        endTime.set(2017, 9, 14, 8, 45);
+        endMillis = endTime.getTimeInMillis();
+
+
+        ContentResolver cr = getContentResolver();
+        ContentValues values = new ContentValues();
+        values.put(Events.DTSTART, startMillis);
+        values.put(Events.DTEND, endMillis);
+        values.put(Events.TITLE, "Jazzercise");
+        values.put(Events.DESCRIPTION, "Group workout");
+        values.put(Events.CALENDAR_ID, calID);
+        values.put(Events.EVENT_TIMEZONE, "America/New York");
+        try {
+            Uri uri = cr.insert(Events.CONTENT_URI, values);
+            eventID = Long.parseLong(uri.getLastPathSegment());
+            Log.e("CALEDNAR***","AddEventsActivity:  added event");
+        } catch (SecurityException e) {
+            e.printStackTrace();
+            Log.e("CALEDNAR***","AddEventsActivity:  Could not add event");
+        }
+            return eventID;
+
+        /*
         int year, month, day, hour, minute;
         String data = df.getText().toString();
         List<String> tmp = Arrays.asList(data.split("/")); // get the data separated
@@ -134,6 +167,7 @@ public class AddEventsActivity extends AppCompatActivity implements EditText.OnC
             e.printStackTrace();
         }
         return -1; // return as an error
+        */
     }
 
     private void deleteFromCalendar(long evtID)

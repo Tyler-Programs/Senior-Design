@@ -39,7 +39,8 @@
         android:layout_marginTop="100dp"
         android:ems="10"
         android:gravity="center"
-        android:id="@+id/emailField" />
+        android:id="@+id/emailField"
+        android:hint="Email" />
 
     <Button
         android:text="Share"

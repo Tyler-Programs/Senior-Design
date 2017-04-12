@@ -27,15 +27,15 @@ import java.io.OutputStreamWriter;
 
 public class EventsPageActivity extends AppCompatActivity implements Button.OnClickListener {
 
-    private Button seb; // save event button
+    private Button seb, neb; // save event button
     public Button menu; // main menu button
 
     //String evtName, evtDate, evtTime, evtLoc;
-    public EditText nf1, nf2, nf3; // name fields
-    public EditText df1, df2, df3; // date field
-    public EditText tf1, tf2, tf3; // time field
-    public EditText af1, af2, af3; //address field
-    public Button sb1, sb2, sb3; // search buttons
+    public EditText nf1, nf2, nf3, nf4, nf5, nf6, nf7, nf8, nf9, nf10; // name fields
+    public EditText df1, df2, df3, df4, df5, df6, df7, df8, df9, df10; // date field
+    public EditText tf1, tf2, tf3, tf4, tf5, tf6, tf7, tf8, tf9, tf10; // time field
+    public EditText af1, af2, af3, af4, af5, af6, af7, af8, af9, af10; //address field
+    public Button sb1, sb2, sb3, sb4, sb5, sb6, sb7, sb8, sb9, sb10; // search buttons
 
 
     //public Button neb, scb, mmb;
@@ -57,37 +57,78 @@ public class EventsPageActivity extends AppCompatActivity implements Button.OnCl
         }
 
         public void init() {
+            neb = (Button) findViewById(R.id.newEventButton);
             seb = (Button) findViewById(R.id.saveButton);
             menu = (Button) findViewById(R.id.mainMenuButton);
 
             nf1 = (EditText) findViewById(R.id.idField1);
             nf2 = (EditText) findViewById(R.id.idField2);
             nf3 = (EditText) findViewById(R.id.idField3);
+            nf4 = (EditText) findViewById(R.id.idField4);
+            nf5 = (EditText) findViewById(R.id.idField5);
+            nf6 = (EditText) findViewById(R.id.idField6);
+            nf7 = (EditText) findViewById(R.id.idField7);
+            nf8 = (EditText) findViewById(R.id.idField8);
+            nf9 = (EditText) findViewById(R.id.idField9);
+            nf10 = (EditText) findViewById(R.id.idField10);
+
             df1 = (EditText) findViewById(R.id.dateField1);
             df2 = (EditText) findViewById(R.id.dateField2);
             df3 = (EditText) findViewById(R.id.dateField3);
+            df4 = (EditText) findViewById(R.id.dateField4);
+            df5 = (EditText) findViewById(R.id.dateField5);
+            df6 = (EditText) findViewById(R.id.dateField6);
+            df7 = (EditText) findViewById(R.id.dateField7);
+            df8 = (EditText) findViewById(R.id.dateField8);
+            df9 = (EditText) findViewById(R.id.dateField9);
+            df10 = (EditText) findViewById(R.id.dateField10);
+
             tf1 = (EditText) findViewById(R.id.timeField1);
             tf2 = (EditText) findViewById(R.id.timeField2);
             tf3 = (EditText) findViewById(R.id.timeField3);
+            tf4 = (EditText) findViewById(R.id.timeField4);
+            tf5 = (EditText) findViewById(R.id.timeField5);
+            tf6 = (EditText) findViewById(R.id.timeField6);
+            tf7 = (EditText) findViewById(R.id.timeField7);
+            tf8 = (EditText) findViewById(R.id.timeField8);
+            tf9 = (EditText) findViewById(R.id.timeField9);
+            tf10 = (EditText) findViewById(R.id.timeField1);
+
             af1 = (EditText) findViewById(R.id.addressField1);
             af2 = (EditText) findViewById(R.id.addressField2);
             af3 = (EditText) findViewById(R.id.addressField3);
+            af4 = (EditText) findViewById(R.id.addressField4);
+            af5 = (EditText) findViewById(R.id.addressField5);
+            af6 = (EditText) findViewById(R.id.addressField6);
+            af7 = (EditText) findViewById(R.id.addressField7);
+            af8 = (EditText) findViewById(R.id.addressField8);
+            af9 = (EditText) findViewById(R.id.addressField9);
+            af10 = (EditText) findViewById(R.id.addressField10);
 
             sb1 = (Button) findViewById(R.id.searchButton1);
             sb2 = (Button) findViewById(R.id.searchButton2);
             sb3 = (Button) findViewById(R.id.searchButton3);
+            sb4 = (Button) findViewById(R.id.searchButton4);
+            sb5 = (Button) findViewById(R.id.searchButton5);
+            sb6 = (Button) findViewById(R.id.searchButton6);
+            sb7 = (Button) findViewById(R.id.searchButton7);
+            sb8 = (Button) findViewById(R.id.searchButton8);
+            sb9 = (Button) findViewById(R.id.searchButton9);
+            sb10 = (Button) findViewById(R.id.searchButton10);
 
             sb1.setOnClickListener(this);
             sb2.setOnClickListener(this);
             sb3.setOnClickListener(this);
+            sb4.setOnClickListener(this);
+            sb5.setOnClickListener(this);
+            sb6.setOnClickListener(this);
+            sb7.setOnClickListener(this);
+            sb8.setOnClickListener(this);
+            sb9.setOnClickListener(this);
+            sb10.setOnClickListener(this);
             seb.setOnClickListener(this);
             menu.setOnClickListener(this);
-            /*menu.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startActivity(new Intent(EventsPageActivity.this, DirectoryActivity.class));
-                }
-            });*/
+            neb.setOnClickListener(this);
         }
 
 
@@ -97,6 +138,9 @@ public class EventsPageActivity extends AppCompatActivity implements Button.OnCl
                 case R.id.saveButton:
                     // get all the string data and put into list
                     // loop through each row
+                    break;
+                case R.id.newEventButton:
+                    startActivity(new Intent(EventsPageActivity.this, AddEventsActivity.class).putExtra("Team_Name",getTeamName()));
                     break;
                 case R.id.mainMenuButton:
                     startActivity(new Intent(EventsPageActivity.this, DirectoryActivity.class).putExtra("Team_Name",getTeamName()));
@@ -109,6 +153,27 @@ public class EventsPageActivity extends AppCompatActivity implements Button.OnCl
                     break;
                 case R.id.searchButton3:
                     launchMaps(v, af3.getText().toString());
+                    break;
+                case R.id.searchButton4:
+                    launchMaps(v, af4.getText().toString());
+                    break;
+                case R.id.searchButton5:
+                    launchMaps(v, af5.getText().toString());
+                    break;
+                case R.id.searchButton6:
+                    launchMaps(v, af6.getText().toString());
+                    break;
+                case R.id.searchButton7:
+                    launchMaps(v, af7.getText().toString());
+                    break;
+                case R.id.searchButton8:
+                    launchMaps(v, af8.getText().toString());
+                    break;
+                case R.id.searchButton9:
+                    launchMaps(v, af9.getText().toString());
+                    break;
+                case R.id.searchButton10:
+                    launchMaps(v, af10.getText().toString());
                     break;
                 default:
             }
@@ -178,6 +243,48 @@ public class EventsPageActivity extends AppCompatActivity implements Button.OnCl
                         df3.setText(data[2]); // date field
                         tf3.setText(data[3]); // time field
                         af3.setText(data[4]); // address field
+                        ret = bufferedReader.readLine();
+                        data = ret.split("#");
+                        nf4.setText(data[1]); //name field
+                        df4.setText(data[2]); // date field
+                        tf4.setText(data[3]); // time field
+                        af4.setText(data[4]); // address field
+                        ret = bufferedReader.readLine();
+                        data = ret.split("#");
+                        nf5.setText(data[1]); //name field
+                        df5.setText(data[2]); // date field
+                        tf5.setText(data[3]); // time field
+                        af5.setText(data[4]); // address field
+                        ret = bufferedReader.readLine();
+                        data = ret.split("#");
+                        nf6.setText(data[1]); //name field
+                        df6.setText(data[2]); // date field
+                        tf6.setText(data[3]); // time field
+                        af6.setText(data[4]); // address field
+                        ret = bufferedReader.readLine();
+                        data = ret.split("#");
+                        nf7.setText(data[1]); //name field
+                        df7.setText(data[2]); // date field
+                        tf7.setText(data[3]); // time field
+                        af7.setText(data[4]); // address field
+                        ret = bufferedReader.readLine();
+                        data = ret.split("#");
+                        nf8.setText(data[1]); //name field
+                        df8.setText(data[2]); // date field
+                        tf8.setText(data[3]); // time field
+                        af8.setText(data[4]); // address field
+                        ret = bufferedReader.readLine();
+                        data = ret.split("#");
+                        nf9.setText(data[1]); //name field
+                        df9.setText(data[2]); // date field
+                        tf9.setText(data[3]); // time field
+                        af9.setText(data[4]); // address field
+                        ret = bufferedReader.readLine();
+                        data = ret.split("#");
+                        nf10.setText(data[1]); //name field
+                        df10.setText(data[2]); // date field
+                        tf10.setText(data[3]); // time field
+                        af10.setText(data[4]); // address field
 
                 /*
                 ^^^^^^^^^^^^^^^^^^^^^^^^^
