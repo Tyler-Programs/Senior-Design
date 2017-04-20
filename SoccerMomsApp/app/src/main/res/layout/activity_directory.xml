@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.example.tbecker012.soccermomsapp.DirectoryActivity"
-    android:background="@android:color/holo_green_light">
+    android:background="@color/colorPrimaryDark">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/colorPrimaryDark"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
@@ -38,35 +38,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:id="@+id/homeButton" />
+            android:id="@+id/homeButton"
+            android:background="@color/common_google_signin_btn_text_dark_default" />
 
         <Button
             android:text="Start New Game"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:id="@+id/newGameButton" />
+            android:id="@+id/newGameButton"
+            android:background="@color/common_google_signin_btn_text_dark_default" />
 
         <Button
             android:text="View Roster"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:id="@+id/rosterButton" />
+            android:id="@+id/rosterButton"
+            android:background="@color/common_google_signin_btn_text_dark_default" />
 
         <Button
             android:text="View Statistics"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:id="@+id/statsButton" />
+            android:id="@+id/statsButton"
+            android:background="@color/common_google_signin_btn_text_dark_default" />
 
         <Button
             android:text="View Team Events"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:id="@+id/eventsButton" />
+            android:id="@+id/eventsButton"
+            android:background="@color/common_google_signin_btn_text_dark_default" />
 
     </LinearLayout>
 

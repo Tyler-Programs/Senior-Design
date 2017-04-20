@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.example.tbecker012.soccermomsapp.HomeActivity"
-    android:background="@android:color/holo_green_light">
+    android:background="@color/colorPrimaryDark">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/colorPrimaryDark"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
@@ -30,7 +30,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="225dp"
         android:layout_marginLeft="120dp"
-        android:id="@+id/viewTeamButton" />
+        android:id="@+id/viewTeamButton"
+        android:background="@color/common_google_signin_btn_text_dark_default" />
 
     <Button
         android:text="Add New Team"
@@ -38,7 +39,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="325dp"
         android:layout_marginLeft="120dp"
-        android:id="@+id/addTeamButton" />
+        android:id="@+id/addTeamButton"
+        android:background="@color/common_google_signin_btn_text_dark_default" />
 
     <TextView
         android:text="Soccer Moms' App"
@@ -47,6 +49,7 @@
         android:layout_marginTop="60dp"
         android:gravity="center"
         android:textSize="30dp"
-        android:id="@+id/textView12" />
+        android:id="@+id/textView12"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
 </android.support.design.widget.CoordinatorLayout>
