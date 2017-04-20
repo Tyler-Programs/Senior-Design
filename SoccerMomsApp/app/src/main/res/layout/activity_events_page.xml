@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.example.tbecker012.soccermomsapp.EventsPageActivity"
-    android:background="@android:color/holo_green_light">
+    android:background="@color/colorPrimaryDark">
 
     <TextView
         android:text="Events Page"
@@ -15,7 +15,8 @@
         android:id="@+id/eventsPageField"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -29,7 +30,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView13"
             android:gravity="center"
-            android:layout_weight="0.47" />
+            android:layout_weight="0.47"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <TextView
             android:text="Date"
@@ -37,7 +39,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView14"
             android:gravity="center"
-            android:layout_weight="0.11" />
+            android:layout_weight="0.11"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <TextView
             android:text="Time"
@@ -45,7 +48,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView15"
             android:gravity="center"
-            android:layout_weight="0.43" />
+            android:layout_weight="0.43"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <TextView
             android:text="Location"
@@ -53,7 +57,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView16"
             android:gravity="center"
-            android:layout_weight="0.83" />
+            android:layout_weight="0.83"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
     </LinearLayout>
 
     <LinearLayout
@@ -117,7 +122,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField1" />
+                    android:id="@+id/idField1"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -126,7 +132,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField2" />
+                    android:id="@+id/idField2"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -135,7 +142,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField3" />
+                    android:id="@+id/idField3"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -144,7 +152,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField4" />
+                    android:id="@+id/idField4"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -153,7 +162,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField5" />
+                    android:id="@+id/idField5"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -162,7 +172,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField6" />
+                    android:id="@+id/idField6"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -171,7 +182,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField7" />
+                    android:id="@+id/idField7"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -180,7 +192,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField8" />
+                    android:id="@+id/idField8"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -189,7 +202,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField9" />
+                    android:id="@+id/idField9"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -198,7 +212,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField10" />
+                    android:id="@+id/idField10"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -207,7 +222,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField11" />
+                    android:id="@+id/idField11"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -216,7 +232,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField12" />
+                    android:id="@+id/idField12"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -225,7 +242,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField13" />
+                    android:id="@+id/idField13"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -234,7 +252,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField14" />
+                    android:id="@+id/idField14"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -243,7 +262,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField15" />
+                    android:id="@+id/idField15"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -252,7 +272,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField16" />
+                    android:id="@+id/idField16"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -261,7 +282,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField17" />
+                    android:id="@+id/idField17"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -270,7 +292,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField18"/>
+                    android:id="@+id/idField18"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -279,7 +302,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField19"/>
+                    android:id="@+id/idField19"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -288,7 +312,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField20"/>
+                    android:id="@+id/idField20"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -297,7 +322,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField21"/>
+                    android:id="@+id/idField21"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -306,7 +332,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField22"/>
+                    android:id="@+id/idField22"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -315,7 +342,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField23"/>
+                    android:id="@+id/idField23"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -324,7 +352,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField24"/>
+                    android:id="@+id/idField24"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -333,7 +362,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField25"/>
+                    android:id="@+id/idField25"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -342,7 +372,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField26"/>
+                    android:id="@+id/idField26"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -351,7 +382,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField27"/>
+                    android:id="@+id/idField27"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -360,7 +392,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField28"/>
+                    android:id="@+id/idField28"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -369,7 +402,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField29"/>
+                    android:id="@+id/idField29"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -378,7 +412,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField30"/>
+                    android:id="@+id/idField30"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -387,7 +422,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField31"/>
+                    android:id="@+id/idField31"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -396,7 +432,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField32"/>
+                    android:id="@+id/idField32"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -405,7 +442,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField33"/>
+                    android:id="@+id/idField33"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -414,7 +452,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField34"/>
+                    android:id="@+id/idField34"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -423,7 +462,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField35"/>
+                    android:id="@+id/idField35"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -432,7 +472,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField36"/>
+                    android:id="@+id/idField36"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -441,7 +482,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField37"/>
+                    android:id="@+id/idField37"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -450,7 +492,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField38"/>
+                    android:id="@+id/idField38"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -459,7 +502,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField39"/>
+                    android:id="@+id/idField39"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -468,7 +512,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField40"/>
+                    android:id="@+id/idField40"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -477,7 +522,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField41"/>
+                    android:id="@+id/idField41"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -486,7 +532,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField42"/>
+                    android:id="@+id/idField42"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -495,7 +542,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField43"/>
+                    android:id="@+id/idField43"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -504,7 +552,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField44"/>
+                    android:id="@+id/idField44"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -513,7 +562,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField45"/>
+                    android:id="@+id/idField45"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -522,7 +572,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField46"/>
+                    android:id="@+id/idField46"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -531,7 +582,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField47"/>
+                    android:id="@+id/idField47"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -540,7 +592,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField48"/>
+                    android:id="@+id/idField48"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -549,7 +602,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField49"/>
+                    android:id="@+id/idField49"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -558,7 +612,8 @@
                     android:text=""
                     android:textSize="16dp"
                     android:ems="10"
-                    android:id="@+id/idField50"/>
+                    android:id="@+id/idField50"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
             </LinearLayout>
 
 
@@ -587,7 +642,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField1" />
+                    android:id="@+id/dateField1"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -596,7 +652,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField2" />
+                    android:id="@+id/dateField2"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -605,7 +662,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField3" />
+                    android:id="@+id/dateField3"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -614,7 +672,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField4" />
+                    android:id="@+id/dateField4"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -623,7 +682,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField5" />
+                    android:id="@+id/dateField5"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -632,7 +692,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField6" />
+                    android:id="@+id/dateField6"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -641,7 +702,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField7" />
+                    android:id="@+id/dateField7"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -650,7 +712,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField8" />
+                    android:id="@+id/dateField8"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -659,7 +722,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField9" />
+                    android:id="@+id/dateField9"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -668,7 +732,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField10" />
+                    android:id="@+id/dateField10"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -677,7 +742,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField11" />
+                    android:id="@+id/dateField11"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -686,7 +752,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField12" />
+                    android:id="@+id/dateField12"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -695,7 +762,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField13" />
+                    android:id="@+id/dateField13"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -704,7 +772,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField14" />
+                    android:id="@+id/dateField14"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -713,7 +782,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField15" />
+                    android:id="@+id/dateField15"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -722,7 +792,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField16" />
+                    android:id="@+id/dateField16"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -731,7 +802,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField17" />
+                    android:id="@+id/dateField17"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -740,7 +812,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField18" />
+                    android:id="@+id/dateField18"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -749,7 +822,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField19" />
+                    android:id="@+id/dateField19"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -758,7 +832,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField20" />
+                    android:id="@+id/dateField20"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -767,7 +842,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField21" />
+                    android:id="@+id/dateField21"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -776,7 +852,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField22" />
+                    android:id="@+id/dateField22"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -785,7 +862,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField23" />
+                    android:id="@+id/dateField23"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -794,7 +872,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField24" />
+                    android:id="@+id/dateField24"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -803,7 +882,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField25" />
+                    android:id="@+id/dateField25"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -812,7 +892,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField26" />
+                    android:id="@+id/dateField26"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -821,7 +902,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField27" />
+                    android:id="@+id/dateField27"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -830,7 +912,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField28" />
+                    android:id="@+id/dateField28"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -839,7 +922,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField29" />
+                    android:id="@+id/dateField29"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -848,7 +932,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField30" />
+                    android:id="@+id/dateField30"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -857,7 +942,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField31" />
+                    android:id="@+id/dateField31"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -866,7 +952,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField32" />
+                    android:id="@+id/dateField32"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -875,7 +962,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField33" />
+                    android:id="@+id/dateField33"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -884,7 +972,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField34" />
+                    android:id="@+id/dateField34"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -893,7 +982,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField35" />
+                    android:id="@+id/dateField35"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -902,7 +992,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField36" />
+                    android:id="@+id/dateField36"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -911,7 +1002,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField37" />
+                    android:id="@+id/dateField37"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -920,7 +1012,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField38" />
+                    android:id="@+id/dateField38"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -929,7 +1022,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField39" />
+                    android:id="@+id/dateField39"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -938,7 +1032,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField40" />
+                    android:id="@+id/dateField40"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -947,7 +1042,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField41" />
+                    android:id="@+id/dateField41"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -956,7 +1052,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField42" />
+                    android:id="@+id/dateField42"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -965,7 +1062,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField43" />
+                    android:id="@+id/dateField43"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -974,7 +1072,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField44" />
+                    android:id="@+id/dateField44"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -983,7 +1082,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField45" />
+                    android:id="@+id/dateField45"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -992,7 +1092,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField46" />
+                    android:id="@+id/dateField46"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1001,7 +1102,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField47" />
+                    android:id="@+id/dateField47"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1010,7 +1112,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField48" />
+                    android:id="@+id/dateField48"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1019,7 +1122,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField49" />
+                    android:id="@+id/dateField49"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1028,7 +1132,8 @@
                     android:textSize="16dp"
                     android:gravity="center"
                     android:ems="10"
-                    android:id="@+id/dateField50" />
+                    android:id="@+id/dateField50"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
             </LinearLayout>
 
 
@@ -1056,7 +1161,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField1" />
+                    android:id="@+id/timeField1"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1065,7 +1171,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField2" />
+                    android:id="@+id/timeField2"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1074,7 +1181,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField3" />
+                    android:id="@+id/timeField3"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1083,7 +1191,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField4" />
+                    android:id="@+id/timeField4"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1092,7 +1201,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField5" />
+                    android:id="@+id/timeField5"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1101,7 +1211,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField6" />
+                    android:id="@+id/timeField6"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1110,7 +1221,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField7" />
+                    android:id="@+id/timeField7"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1119,7 +1231,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField8" />
+                    android:id="@+id/timeField8"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1128,7 +1241,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField9" />
+                    android:id="@+id/timeField9"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1137,7 +1251,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField10" />
+                    android:id="@+id/timeField10"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1146,7 +1261,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField11" />
+                    android:id="@+id/timeField11"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1155,7 +1271,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField12" />
+                    android:id="@+id/timeField12"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1164,7 +1281,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField13" />
+                    android:id="@+id/timeField13"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1173,7 +1291,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField14" />
+                    android:id="@+id/timeField14"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1182,7 +1301,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField15" />
+                    android:id="@+id/timeField15"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1191,7 +1311,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField16" />
+                    android:id="@+id/timeField16"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1200,7 +1321,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField17" />
+                    android:id="@+id/timeField17"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1209,7 +1331,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField18" />
+                    android:id="@+id/timeField18"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1218,7 +1341,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField19" />
+                    android:id="@+id/timeField19"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1227,7 +1351,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField20" />
+                    android:id="@+id/timeField20"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1236,7 +1361,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField21" />
+                    android:id="@+id/timeField21"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1245,7 +1371,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField22" />
+                    android:id="@+id/timeField22"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1254,7 +1381,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField23" />
+                    android:id="@+id/timeField23"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1263,7 +1391,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField24" />
+                    android:id="@+id/timeField24"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1272,7 +1401,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField25" />
+                    android:id="@+id/timeField25"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1281,7 +1411,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField26" />
+                    android:id="@+id/timeField26"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1290,7 +1421,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField27" />
+                    android:id="@+id/timeField27"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1299,7 +1431,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField28" />
+                    android:id="@+id/timeField28"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1308,7 +1441,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField29" />
+                    android:id="@+id/timeField29"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1317,7 +1451,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField30" />
+                    android:id="@+id/timeField30"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1326,7 +1461,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField31" />
+                    android:id="@+id/timeField31"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1335,7 +1471,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField32" />
+                    android:id="@+id/timeField32"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1344,7 +1481,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField33" />
+                    android:id="@+id/timeField33"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1353,7 +1491,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField34" />
+                    android:id="@+id/timeField34"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1362,7 +1501,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField35" />
+                    android:id="@+id/timeField35"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1371,7 +1511,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField36" />
+                    android:id="@+id/timeField36"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1380,7 +1521,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField37" />
+                    android:id="@+id/timeField37"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1389,7 +1531,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField38" />
+                    android:id="@+id/timeField38"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1398,7 +1541,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField39" />
+                    android:id="@+id/timeField39"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1407,7 +1551,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField40" />
+                    android:id="@+id/timeField40"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1416,7 +1561,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField41" />
+                    android:id="@+id/timeField41"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1425,7 +1571,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField42" />
+                    android:id="@+id/timeField42"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1434,7 +1581,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField43" />
+                    android:id="@+id/timeField43"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1443,7 +1591,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField44" />
+                    android:id="@+id/timeField44"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1452,7 +1601,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField45" />
+                    android:id="@+id/timeField45"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1461,7 +1611,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField46" />
+                    android:id="@+id/timeField46"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1470,7 +1621,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField47" />
+                    android:id="@+id/timeField47"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1479,7 +1631,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField48" />
+                    android:id="@+id/timeField48"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1488,7 +1641,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField49" />
+                    android:id="@+id/timeField49"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1497,7 +1651,8 @@
                     android:gravity="center"
                     android:inputType="time"
                     android:ems="10"
-                    android:id="@+id/timeField50" />
+                    android:id="@+id/timeField50"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
             </LinearLayout>
 
 
@@ -1524,7 +1679,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField1" />
+                    android:id="@+id/addressField1"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1532,7 +1688,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField2" />
+                    android:id="@+id/addressField2"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1540,7 +1697,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField3" />
+                    android:id="@+id/addressField3"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1548,7 +1706,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField4" />
+                    android:id="@+id/addressField4"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1556,7 +1715,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField5" />
+                    android:id="@+id/addressField5"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1564,7 +1724,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField6" />
+                    android:id="@+id/addressField6"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1572,7 +1733,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField7" />
+                    android:id="@+id/addressField7"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1580,7 +1742,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField8" />
+                    android:id="@+id/addressField8"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1588,7 +1751,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField9" />
+                    android:id="@+id/addressField9"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1596,7 +1760,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField10" />
+                    android:id="@+id/addressField10"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1604,7 +1769,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField11" />
+                    android:id="@+id/addressField11"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1612,7 +1778,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField12" />
+                    android:id="@+id/addressField12"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1620,7 +1787,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField13" />
+                    android:id="@+id/addressField13"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1628,7 +1796,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField14" />
+                    android:id="@+id/addressField14"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1636,7 +1805,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField15" />
+                    android:id="@+id/addressField15"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1644,7 +1814,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField16" />
+                    android:id="@+id/addressField16"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1652,7 +1823,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField17" />
+                    android:id="@+id/addressField17"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1660,7 +1832,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField18" />
+                    android:id="@+id/addressField18"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1668,7 +1841,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField19" />
+                    android:id="@+id/addressField19"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1676,7 +1850,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField20" />
+                    android:id="@+id/addressField20"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1684,7 +1859,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField21" />
+                    android:id="@+id/addressField21"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1692,7 +1868,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField22" />
+                    android:id="@+id/addressField22"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1700,7 +1877,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField23" />
+                    android:id="@+id/addressField23"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1708,7 +1886,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField24" />
+                    android:id="@+id/addressField24"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1716,7 +1895,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField25" />
+                    android:id="@+id/addressField25"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1724,7 +1904,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField26" />
+                    android:id="@+id/addressField26"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1732,7 +1913,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField27" />
+                    android:id="@+id/addressField27"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1740,7 +1922,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField28" />
+                    android:id="@+id/addressField28"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1748,7 +1931,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField29" />
+                    android:id="@+id/addressField29"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1756,7 +1940,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField30" />
+                    android:id="@+id/addressField30"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1764,7 +1949,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField31" />
+                    android:id="@+id/addressField31"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1772,7 +1958,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField32" />
+                    android:id="@+id/addressField32"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1780,7 +1967,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField33" />
+                    android:id="@+id/addressField33"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1788,7 +1976,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField34" />
+                    android:id="@+id/addressField34"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1796,7 +1985,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField35" />
+                    android:id="@+id/addressField35"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1804,7 +1994,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField36" />
+                    android:id="@+id/addressField36"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1812,7 +2003,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField37" />
+                    android:id="@+id/addressField37"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1820,7 +2012,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField38" />
+                    android:id="@+id/addressField38"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1828,7 +2021,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField39" />
+                    android:id="@+id/addressField39"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1836,7 +2030,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField40" />
+                    android:id="@+id/addressField40"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1844,7 +2039,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField41" />
+                    android:id="@+id/addressField41"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1852,7 +2048,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField42" />
+                    android:id="@+id/addressField42"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1860,7 +2057,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField43" />
+                    android:id="@+id/addressField43"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1868,7 +2066,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField44" />
+                    android:id="@+id/addressField44"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1876,7 +2075,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField45" />
+                    android:id="@+id/addressField45"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1884,7 +2084,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField46" />
+                    android:id="@+id/addressField46"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1892,7 +2093,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField47" />
+                    android:id="@+id/addressField47"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1900,7 +2102,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField48" />
+                    android:id="@+id/addressField48"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1908,7 +2111,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField49" />
+                    android:id="@+id/addressField49"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -1917,7 +2121,8 @@
                     android:textSize="16dp"
                     android:inputType="textPostalAddress"
                     android:ems="10"
-                    android:id="@+id/addressField50" />
+                    android:id="@+id/addressField50"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default" />
             </LinearLayout>
 
 
@@ -1944,350 +2149,400 @@
                     android:layout_height="55dp"
                     android:id="@+id/searchButton1"
                     android:textSize="14dp"
-                    android:onClick="launchMaps" />
+                    android:onClick="launchMaps"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton2"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton3"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton4"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton5"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton6"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton7"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton8"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton9"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton10"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton11"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton12"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton13"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton14"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton15"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton16"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton17"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton18"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton19"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton20"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton21"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton22"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton23"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton24"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton25"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton26"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton27"
-                    android:textSize="16dp"/>
+                    android:textSize="16dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton28"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton29"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton30"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton31"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton32"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton33"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton34"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton35"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton36"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton37"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton38"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton39"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton40"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton41"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton42"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton43"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton44"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton45"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton46"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton47"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton48"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton49"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
 
                 <Button
                     android:text="MAP"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:id="@+id/searchButton50"
-                    android:textSize="14dp"/>
+                    android:textSize="14dp"
+                    android:background="@color/common_google_signin_btn_text_dark_default" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -2304,14 +2559,16 @@
             android:layout_width="150dp"
             android:layout_height="match_parent"
             android:id="@+id/newEventButton"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:background="@color/common_google_signin_btn_text_dark_default" />
 
         <Button
             android:text="Save Changes"
             android:layout_width="150dp"
             android:layout_height="match_parent"
             android:id="@+id/saveButton"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:background="@color/common_google_signin_btn_text_dark_default" />
     </LinearLayout>
 
     <Button
@@ -2320,6 +2577,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="510dp"
         android:id="@+id/mainMenuButton"
-        android:onClick="onClick (EventsPageActivity)" />
+        android:onClick="onClick (EventsPageActivity)"
+        android:background="@color/common_google_signin_btn_text_dark_default" />
 
 </android.support.design.widget.CoordinatorLayout>
