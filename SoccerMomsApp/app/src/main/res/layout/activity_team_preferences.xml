@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.example.tbecker012.soccermomsapp.TeamPreferencesActivity"
-    android:background="@android:color/holo_green_light">
+    android:background="@color/colorPrimaryDark">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/colorPrimaryDark"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
@@ -32,14 +32,16 @@
         android:layout_marginTop="60dp"
         android:textSize="30dp"
         android:gravity="center"
-        android:id="@+id/textView17" />
+        android:id="@+id/textView17"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
     <Button
         android:text="Main Menu"
         android:layout_width="190dp"
         android:layout_height="50dp"
         android:layout_marginTop="510dp"
-        android:id="@+id/mainMenuButton" />
+        android:id="@+id/mainMenuButton"
+        android:background="@color/common_google_signin_btn_text_dark_default" />
 
     <Button
         android:text="Finish Preferences"
@@ -48,7 +50,11 @@
         android:layout_marginTop="510dp"
         android:layout_marginLeft="190dp"
         android:id="@+id/donePreferencesButton"
+
         android:textSize="12sp" />
+
+        android:background="@color/common_google_signin_btn_text_dark_default" />
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -63,7 +69,8 @@
             android:layout_marginTop="90dp"
             android:textSize="20dp"
             android:gravity="center"
-            android:id="@+id/nameField" />
+            android:id="@+id/nameField"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <EditText
             android:layout_width="match_parent"
@@ -72,7 +79,8 @@
             android:text=""
             android:gravity="center"
             android:ems="10"
-            android:id="@+id/addTeamField" />
+            android:id="@+id/addTeamField"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <TextView
             android:text="Default Game Time:"
@@ -81,13 +89,15 @@
             android:layout_marginTop="60dp"
             android:textSize="20dp"
             android:gravity="center"
-            android:id="@+id/timeField" />
+            android:id="@+id/timeField"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <Spinner
             android:layout_width="150dp"
             android:layout_height="43dp"
             android:layout_marginLeft="110dp"
             android:gravity="center"
-            android:id="@+id/gameTimeSpinner" />
+            android:id="@+id/gameTimeSpinner"
+            android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

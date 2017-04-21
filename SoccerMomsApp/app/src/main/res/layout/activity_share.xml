@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.example.tbecker012.soccermomsapp.ShareActivity"
-    android:background="@android:color/holo_green_light">
+    android:background="@color/colorPrimaryDark">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/colorPrimaryDark"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
@@ -29,7 +29,8 @@
         android:textSize="24dp"
         android:layout_marginLeft="130dp"
         android:layout_marginTop="65dp"
-        android:id="@+id/textView18" />
+        android:id="@+id/textView18"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -41,6 +42,7 @@
         android:gravity="center"
         android:id="@+id/emailField"
         android:hint="Email" />
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
     <Button
         android:text="Share"
@@ -48,14 +50,16 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="145dp"
         android:layout_marginTop="150dp"
-        android:id="@+id/rosterButton" />
+        android:id="@+id/rosterButton"
+        android:background="@color/common_google_signin_btn_text_dark_default" />
 
     <Button
         android:text="Main Menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="520dp"
-        android:id="@+id/homeButton" />
+        android:id="@+id/homeButton"
+        android:background="@color/common_google_signin_btn_text_dark_default" />
 
     <EditText
         android:layout_width="match_parent"
@@ -66,7 +70,8 @@
         android:textSize="14dp"
         android:gravity="center"
         android:ems="10"
-        android:id="@+id/editText" />
+        android:id="@+id/editText"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
     <include layout="@layout/content_share"
         android:id="@+id/include2" />
