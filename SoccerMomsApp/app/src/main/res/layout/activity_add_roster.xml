@@ -39,15 +39,19 @@
         android:text="Main Menu"
         android:layout_width="190dp"
         android:layout_height="50dp"
-        android:layout_marginTop="510dp"
-        android:id="@+id/mainMenuButton"
+
+        android:layout_marginTop="560dp"
+        android:id="@+id/mainMenuButton" />
+
+
         android:background="@color/common_google_signin_btn_text_dark_default" />
+
 
     <Button
         android:text="Finish Roster"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="510dp"
+        android:layout_marginTop="560dp"
         android:layout_marginLeft="190dp"
         android:id="@+id/doneRosterButton"
         android:background="@color/common_google_signin_btn_text_dark_default" />
@@ -55,8 +59,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="410dp"
-        android:layout_marginTop="100dp">
+        android:layout_height="430dp"
+        android:layout_marginTop="110dp">
 
         <Button
             android:text="Add/Save Player"
@@ -75,9 +79,8 @@
             android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <EditText
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="120dp"
             android:inputType="textPersonName"
             android:text=""
             android:gravity="center"
@@ -95,9 +98,8 @@
             android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <EditText
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="120dp"
             android:inputType="number"
             android:gravity="center"
             android:ems="10"
@@ -114,9 +116,8 @@
             android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <EditText
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="120dp"
             android:inputType="number"
             android:gravity="center"
             android:ems="10"
@@ -150,9 +151,8 @@
             android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <EditText
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="120dp"
             android:inputType="number"
             android:gravity="center"
             android:ems="10"

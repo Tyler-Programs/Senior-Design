@@ -4,10 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -21,8 +18,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class RosterPageActivity extends AppCompatActivity implements EditText.OnClickListener{
     public Button hb, ub, ab, cb1, cb2, cb3, cb4, cb5, cb6, cb7, cb8, cb9, cb10, cb11, cb12, cb13, cb14, cb15, cb16, cb17, cb18, cb19, cb20, cb21, cb22, cb23, cb24, cb25, cb26, cb27, cb28, cb29, cb30, cb31, cb32, cb33, cb34, cb35, cb36, cb37, cb38, cb39, cb40;
@@ -48,6 +46,15 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
     public void init(){
         /*
         Delete below once dynamic
+         */
+
+        /******
+         * TESTING
+         */
+
+        Log.e("test","cur team: "+getTeamName());
+        /*********
+        *
          */
         nf1 = (EditText) findViewById(R.id.nameField1);
         nf2 = (EditText) findViewById(R.id.nameField2);
@@ -305,15 +312,16 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         ub.setOnClickListener(this);
+        cb1.setOnClickListener(this);
 
         ab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RosterPageActivity.this, AddRosterActivity.class));
+                startActivity(new Intent(RosterPageActivity.this, AddRosterActivity.class).putExtra("Team_Name",getTeamName()));
             }
         });
 
-        cb1.setOnClickListener(new View.OnClickListener() {
+        /*cb1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (FileHelper.saveToFile( nf1.getText().toString())){
@@ -322,12 +330,12 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
                     Toast.makeText(RosterPageActivity.this,"Error save file!!!",Toast.LENGTH_SHORT).show();
                 }
             }
-        });
+        });*/
 
         hb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RosterPageActivity.this, DirectoryActivity.class));
+                startActivity(new Intent(RosterPageActivity.this, DirectoryActivity.class).putExtra("Team_Name",getTeamName()));
             }
         });
 
@@ -382,6 +390,12 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
                 break;
 
             case R.id.updateButton:
+                // get the data
+                // call rewriteRoster from filemanager
+
+                FileManager fileManager = new FileManager(getTeamName());
+                fileManager.rewriteRoster(getRosterData(), getApplicationContext());
+
                 break;
 
             case R.id.clearButton1:
@@ -1331,7 +1345,7 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         String ret = "";
 
         try {
-            File myFile = new File("" + context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + "Team1"), "Team1" + "Roster.txt"); // replace 'Team1' with teamName once dynamic
+            File myFile = new File("" + context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS + "/" + getTeamName()), getTeamName() + "Roster.txt"); // replace 'Team1' with teamName once dynamic
             FileInputStream in = new FileInputStream(myFile);
             String[] data = new String[6];
 
@@ -1342,7 +1356,51 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
                 /*
                 Loop once dynamic
                  */
-                ret = bufferedReader.readLine();
+                try {
+                    ret = bufferedReader.readLine();
+                    data = ret.split("#");
+                    nf1.setText(data[0]); // first and last name
+                    af1.setText(data[1]);
+                    nuf1.setText(data[2]);
+                    ps1.setSelection(1);
+                    Log.e("TEST",ps1.getAdapter().getItem(1).toString());
+                    Log.e("TEST","cur pos: "+ps1.getSelectedItem().toString());
+                    gf1.setText(data[4]);
+                    ret = bufferedReader.readLine();
+                    data = ret.split("#");
+                    nf2.setText(data[0]); // first and last name
+                    af2.setText(data[1]);
+                    nuf2.setText(data[2]);
+                    ps2.setSelection(1);
+                    gf2.setText(data[4]);
+                    ret = bufferedReader.readLine();
+                    data = ret.split("#");
+                    nf3.setText(data[0]); // first and last name
+                    ps3.setSelection(1);
+                    af3.setText(data[1]);
+                    nuf3.setText(data[2]);
+                    gf3.setText(data[4]);
+                    ret = bufferedReader.readLine();
+                    data = ret.split("#");
+                    nf4.setText(data[0]); // first and last name
+                    ps4.setSelection(1);
+                    af4.setText(data[1]);
+                    nuf4.setText(data[2]);
+                    gf4.setText(data[4]);
+                    ret = bufferedReader.readLine();
+                    data = ret.split("#");
+                    nf5.setText(data[0]); // first and last name
+                    af5.setText(data[1]);
+                    nuf5.setText(data[2]);
+                    ps5.setSelection(1);
+                    gf5.setText(data[4]);
+                } catch (Exception e)
+                {
+                    e.printStackTrace();
+                    Log.e("test","could not write roster list");
+                }
+
+               /*ret = bufferedReader.readLine();
                 data = ret.split("#");
                 nf1.setText(data[0]); // first and last name
                 af1.setText(data[1]);
@@ -1376,10 +1434,8 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
                 af5.setText(data[1]);
                 nuf5.setText(data[2]);
                 ps5.setSelection(1);
-                gf5.setText(data[4]);
-                /*
-                ^^^^^^^^^^^^^^^^^^^^^^^^^
-                 */
+                gf5.setText(data[4]);*/
+
 
                 in.close();
             }
@@ -1390,6 +1446,18 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         }
 
        // return ret; // return used to be String
+    }
+
+
+    private String getTeamName() // get the string sent from the TeamPreferencesActivity
+    {
+        String newString;
+        Bundle extras = getIntent().getExtras();
+        if (extras == null) // is there any strings
+            newString = null;
+        else
+            newString = extras.getString("Team_Name"); // retrieve the string
+        return newString;
     }
 
     public void reset_text(EditText destName, EditText sourceName, EditText destAge, EditText sourceAge, EditText destNum, EditText sourceNum, Spinner destPos, Spinner sourcePos, EditText destGrade, EditText sourceGrade) {
@@ -1431,5 +1499,55 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
             }
 
         }
+    }
+
+
+    public ArrayList<String> getRosterData()
+    {
+        ArrayList<String> list = new ArrayList<>();
+
+        // loop to get player info. If an entire row is empty, that is the last row. Currently done up to 5 rows.
+        if(nf1.getText().toString() == af1.getText().toString() && nuf1.getText().toString() == gf1.getText().toString() && gf1.getText().toString() == "") // if every entry is empty
+        {
+            // add nothing
+            return list;
+        }
+        else {
+            list.add(nf1.getText().toString() + "#" + af1.getText().toString() + "#" + nuf1.getText().toString() + "#" + ps1.getSelectedItem().toString() + "#" + gf1.getText().toString());
+        }
+        if(nf2.getText().toString() == af2.getText().toString() && nuf2.getText().toString() == gf2.getText().toString() && gf2.getText().toString() == "") // if every entry is empty
+        {
+            // add nothing
+            return list;
+        }
+        else {
+            list.add(nf2.getText().toString() + "#" + af2.getText().toString() + "#" + nuf2.getText().toString() + "#" + ps2.getSelectedItem().toString() + "#" + gf2.getText().toString());
+        }
+        if(nf3.getText().toString() == af3.getText().toString() && nuf3.getText().toString() == gf3.getText().toString() && gf3.getText().toString() == "") // if every entry is empty
+        {
+            // add nothing
+            return list;
+        }
+        else {
+            list.add(nf3.getText().toString() + "#" + af3.getText().toString() + "#" + nuf3.getText().toString() + "#" + ps3.getSelectedItem().toString() + "#" + gf3.getText().toString());
+        }
+        if(nf4.getText().toString() == af4.getText().toString() && nuf4.getText().toString() == gf4.getText().toString() && gf4.getText().toString() == "") // if every entry is empty
+        {
+            // add nothing
+            return list;
+        }
+        else {
+            list.add(nf4.getText().toString() + "#" + af4.getText().toString() + "#" + nuf4.getText().toString() + "#" + ps4.getSelectedItem().toString() + "#" + gf4.getText().toString());
+        }
+        if(nf5.getText().toString() == af5.getText().toString() && nuf5.getText().toString() == gf5.getText().toString() && gf5.getText().toString() == "") // if every entry is empty
+        {
+            // add nothing
+            return list;
+        }
+        else {
+            list.add(nf5.getText().toString() + "#" + af5.getText().toString() + "#" + nuf5.getText().toString() + "#" + ps5.getSelectedItem().toString() + "#" + gf5.getText().toString());
+        }
+
+        return list;
     }
 }

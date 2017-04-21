@@ -82,12 +82,7 @@
             android:layout_weight="1" />
     </LinearLayout>
 
-    <Button
-        android:text="Main Menu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="510dp"
-        android:id="@+id/mainMenuButton" />
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -2575,9 +2570,12 @@
         android:text="Main Menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="510dp"
-        android:id="@+id/mainMenuButton"
-        android:onClick="onClick (EventsPageActivity)"
+
+        android:layout_marginTop="560dp"
+        android:id="@+id/mainMenuButton" />
+
+
         android:background="@color/common_google_signin_btn_text_dark_default" />
+
 
 </android.support.design.widget.CoordinatorLayout>

@@ -38,15 +38,19 @@
         android:text="Main Menu"
         android:layout_width="190dp"
         android:layout_height="50dp"
-        android:layout_marginTop="510dp"
-        android:id="@+id/mainMenuButton"
+
+        android:layout_marginTop="560dp"
+        android:id="@+id/mainMenuButton" />
+
+        
         android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
+
 
     <Button
         android:text="Finish Events"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="510dp"
+        android:layout_marginTop="560dp"
         android:layout_marginLeft="190dp"
         android:id="@+id/doneButton"
         android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
@@ -54,7 +58,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="410dp"
+        android:layout_height="430dp"
         android:layout_marginTop="100dp">
 
         <Button

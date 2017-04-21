@@ -41,7 +41,7 @@ public class TeamPreferencesActivity extends AppCompatActivity implements EditTe
         mmb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(TeamPreferencesActivity.this, DirectoryActivity.class));
+                startActivity(new Intent(TeamPreferencesActivity.this, DirectoryActivity.class).putExtra("Team_Name",getName())); // getTeamName -> getName
             }
         });
 
@@ -52,7 +52,8 @@ public class TeamPreferencesActivity extends AppCompatActivity implements EditTe
                 FileManager fileManager = new FileManager(teamName); // create a file manager with that team name
                 fileManager.createDirectory(getApplicationContext()); // create the directory
                 fileManager.createRosterFile(getApplicationContext()); // create the roster text file
-                startActivity(new Intent(TeamPreferencesActivity.this, AddRosterActivity.class).putExtra("Team_Name",teamName));
+                writePreferences();
+                startActivity(new Intent(TeamPreferencesActivity.this, AddRosterActivity.class).putExtra("Team_Name",getName())); // getTeamName -> getName
             }
         });
         gts.setAdapter(adapter);
@@ -62,4 +63,28 @@ public class TeamPreferencesActivity extends AppCompatActivity implements EditTe
     public void onClick(View v) {
 
     }
+
+    private void writePreferences()
+    {
+        Log.e("TESTING","gts to string:  "+gts.getSelectedItem().toString());
+        Log.e("TESTING", "cur team: "+getName());
+        File t = new FileManager(getName()).createPreferencesFile(getApplicationContext(), gts.getSelectedItem().toString());
+    }
+
+
+    private String getName()
+    {
+        return atf.getText().toString();
+    }
+/*
+    private String getTeamName() // get the string sent from the TeamPreferencesActivity
+    {
+        String newString;
+        Bundle extras = getIntent().getExtras();
+        if(extras == null) // is there any strings
+            newString = null;
+        else
+            newString = extras.getString("Team_Name"); // retrieve the string
+        return newString;
+    }*/
 }

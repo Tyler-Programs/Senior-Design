@@ -38,7 +38,7 @@ public class GoalActivity extends AppCompatActivity implements EditText.OnClickL
         cb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(GoalActivity.this, ScoreboardActivity.class));
+                startActivity(new Intent(GoalActivity.this, ScoreboardActivity.class).putExtra("Team_Name",getTeamName()));
             }
         });
 
@@ -61,5 +61,16 @@ public class GoalActivity extends AppCompatActivity implements EditText.OnClickL
             case R.id.cancelButton:
                 break;
         }
+    }
+
+    private String getTeamName() // get the string sent from the TeamPreferencesActivity
+    {
+        String newString;
+        Bundle extras = getIntent().getExtras();
+        if(extras == null) // is there any strings
+            newString = null;
+        else
+            newString = extras.getString("Team_Name"); // retrieve the string
+        return newString;
     }
 }

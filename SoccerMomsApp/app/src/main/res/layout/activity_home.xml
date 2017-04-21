@@ -20,12 +20,14 @@
             android:background="@color/colorPrimaryDark"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
+
+
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_home" />
 
     <Button
-        android:text="View My Teams"
+        android:text="View My Team"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="225dp"
@@ -51,5 +53,7 @@
         android:textSize="30dp"
         android:id="@+id/textView12"
         android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+
 
 </android.support.design.widget.CoordinatorLayout>
