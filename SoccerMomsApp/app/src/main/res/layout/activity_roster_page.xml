@@ -21,8 +21,9 @@
         android:text="Main Menu"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="515dp"
-        android:id="@+id/homeButton" />
+        android:layout_marginTop="560dp"
+        android:id="@+id/homeButton"
+        />
 
 
     <ScrollView
@@ -851,13 +852,12 @@
 
                 <EditText
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
+                    android:layout_height="wrap_content"
                     android:inputType="number"
                     android:text=""
                     android:ems="10"
                     android:id="@+id/numField1"
-                    android:textSize="12sp"
-                    android:layout_weight="1" />
+                    android:textSize="12sp" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -1267,241 +1267,263 @@
                 android:orientation="vertical" >
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
-                    android:id="@+id/posSpinner1"
-                    android:layout_weight="1" />
+                    android:id="@+id/posSpinner1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner2"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/spinner5"
+                    android:layout_weight="1" />
+
+                <Spinner
+                    android:layout_width="95dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/spinner4"
+                    android:layout_weight="1" />
+
+                <Spinner
+                    android:layout_width="95dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/spinner3"
+                    android:layout_weight="1" />
+
+                <Spinner
+                    android:layout_width="95dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/spinner2" />
+
+                <Spinner
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner3"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner4"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner5"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner6"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner7"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner8"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner9"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner10"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner11"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner12"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner13"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner14"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner15"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner16"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner17"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner18"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner19"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner20"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner21"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner22"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner23"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner24"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner25"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner26"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner27"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner28"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner29"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner30"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner31"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner32"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner33"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner34"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner35"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner36"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner37"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner38"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner39"
                     android:layout_weight="1" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner40"
                     android:layout_weight="1" />
@@ -1524,7 +1546,7 @@
                 android:orientation="vertical" >
 
                 <EditText
-                    android:layout_width="78dp"
+                    android:layout_width="59dp"
                     android:inputType="textPersonName"
                     android:text=""
                     android:ems="10"

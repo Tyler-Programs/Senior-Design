@@ -5,6 +5,7 @@ import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.CalendarContract;
@@ -97,32 +98,73 @@ public class AddEventsActivity extends AppCompatActivity implements EditText.OnC
         return newString;
     }
 
+    private long[] getCalendarList()
+    {
+        long[] list = new long[10];
+        try {
+            String[] projection =
+                    new String[]{
+                            Calendars._ID,
+                            Calendars.NAME,
+                            Calendars.ACCOUNT_NAME,
+                            Calendars.ACCOUNT_TYPE
+                    };
+            Cursor calCursor = getContentResolver().query(Calendars.CONTENT_URI, projection, Calendars.VISIBLE + " = 1", null, Calendars._ID + " ASC");
+            if (calCursor.moveToFirst()) {
+                do {
+                    long id = calCursor.getLong(0);
+                    String displayName = calCursor.getString(1);
+                    list[calCursor.getCount()] = id;
+                    // …
+                } while (calCursor.moveToNext());
+            }
+        }
+        catch (SecurityException e)
+        {
+            e.printStackTrace();
+            Log.d("GET_CALENDAR***", "getCalendarList() problems");
+        }
+        for(int i=0;i<list.length;i++)
+            Log.d("GET_CALENDAR***", "list["+i+"]: "+list[i]);
+
+        return list;
+    }
+
     private long writeToCalendar()
     {
         long eventID = -1;
-        long calID = 3;
+        long calID = 8; // test phone's cal
         long startMillis = 0;
         long endMillis = 0;
+
+        String date[] = df.getText().toString().split("/"); // mm/dd/yyyy
+        String time[] = tf.getText().toString().split(":"); // hh:mm (24 base)
+
         Calendar beginTime = Calendar.getInstance();
-        beginTime.set(2017, 9, 14, 7, 30);
+        // year, month, day, hour, minute
+        beginTime.set(Integer.parseInt(date[2]), Integer.parseInt(date[0]) - 1, Integer.parseInt(date[1]), Integer.parseInt(time[0]), Integer.parseInt(time[1])); // writes it one month later, so move the month back one
         startMillis = beginTime.getTimeInMillis();
         Calendar endTime = Calendar.getInstance();
-        endTime.set(2017, 9, 14, 8, 45);
+        endTime.set(Integer.parseInt(date[2]), Integer.parseInt(date[0]) - 1, Integer.parseInt(date[1]), Integer.parseInt(time[0])+1, Integer.parseInt(time[1]));
         endMillis = endTime.getTimeInMillis();
 
+
+        //getCalendarList();
 
         ContentResolver cr = getContentResolver();
         ContentValues values = new ContentValues();
         values.put(Events.DTSTART, startMillis);
         values.put(Events.DTEND, endMillis);
-        values.put(Events.TITLE, "Jazzercise");
-        values.put(Events.DESCRIPTION, "Group workout");
+        values.put(Events.TITLE, nf.getText().toString());
+        values.put(Events.DESCRIPTION, "");
         values.put(Events.CALENDAR_ID, calID);
         values.put(Events.EVENT_TIMEZONE, "America/New York");
         try {
             Uri uri = cr.insert(Events.CONTENT_URI, values);
             eventID = Long.parseLong(uri.getLastPathSegment());
-            Log.e("CALEDNAR***","AddEventsActivity:  added event");
+            Log.d("CALENDAR***","AddEventsActivity:  added event");
+            Log.d("CALENDAR***","Cal URI: "+ uri);
+            Log.d("CALENDAR***","CalID: "+Events.CALENDAR_ID);
         } catch (SecurityException e) {
             e.printStackTrace();
             Log.e("CALEDNAR***","AddEventsActivity:  Could not add event");

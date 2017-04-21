@@ -68,12 +68,12 @@ public class ScoreboardActivity extends AppCompatActivity implements EditText.On
         hb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-<<<<<<< HEAD
+//<<<<<<< HEAD
                 startActivity(new Intent(ScoreboardActivity.this, DirectoryActivity.class).putExtra("Team_Name",getTeamName()));
-=======
+//=======
                 moveTaskToBack(true);
-                startActivity(new Intent(ScoreboardActivity.this, DirectoryActivity.class));
->>>>>>> refs/remotes/origin/master
+                startActivity(new Intent(ScoreboardActivity.this, DirectoryActivity.class).putExtra("Team_Name",getTeamName()));
+//>>>>>>> refs/remotes/origin/master
             }
         });
     }

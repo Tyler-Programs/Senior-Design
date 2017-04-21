@@ -291,7 +291,7 @@ public class EventsPageActivity extends AppCompatActivity implements Button.OnCl
                  */
                     } catch (Exception e)
                     {
-                        Log.e("test","EventsPageActivity:  could not write all events");
+                        Log.e("test","EventsPageActivity:  could not write all events to view");
                         e.printStackTrace();
                     }
 

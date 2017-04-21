@@ -47,7 +47,8 @@
         android:layout_height="50dp"
         android:layout_marginTop="510dp"
         android:layout_marginLeft="190dp"
-        android:id="@+id/donePreferencesButton" />
+        android:id="@+id/donePreferencesButton"
+        android:textSize="12sp" />
 
     <LinearLayout
         android:orientation="vertical"
