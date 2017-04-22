@@ -1,149 +1,328 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.example.tbecker012.soccermomsapp.AddEventsActivity"
-    android:background="@color/colorPrimaryDark">
-
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimaryDark"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_add_events" />
+    android:background="@color/colorPrimaryDark"
+    >
 
     <TextView
+        android:id="@+id/textView17"
         android:text="Add / Update Events"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="60dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="0dp"
+
         android:textSize="30dp"
         android:gravity="center"
-        android:id="@+id/textView17"
         android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
     <Button
-        android:text="Main Menu"
-        android:layout_width="190dp"
-        android:layout_height="50dp"
+        android:id="@+id/addEventButton"
+        android:text="Add/Save Event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-        android:layout_marginTop="560dp"
-        android:id="@+id/mainMenuButton" />
+        android:layout_below="@id/textView17"
 
-        
         android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
-
-    <Button
-        android:text="Finish Events"
+    <GridLayout
+        android:id="@+id/buttons"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="560dp"
-        android:layout_marginLeft="190dp"
-        android:id="@+id/doneButton"
-        android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="430dp"
-        android:layout_marginTop="100dp">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:rowCount="1"
+        android:columnCount="2">
 
         <Button
-            android:text="Add/Save Event"
-            android:layout_width="match_parent"
+            android:id="@+id/mainMenuButton"
+            android:text="Main Menu"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:id="@+id/addEventButton"
+
+            android:layout_columnWeight="1"
+            android:layout_alignParentBottom="true"
+
+            android:backgroundTint="@color/common_google_signin_btn_text_dark_default"/>
+
+        <Button
+            android:id="@+id/doneButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+
+            android:layout_columnWeight="1"
+            android:layout_alignParentBottom="true"
+
+            android:text="Finish Events"
             android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
+    </GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/eventForm"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+
+        android:layout_below="@id/addEventButton"
+        android:layout_above="@id/buttons"
+        android:gravity="center"
+        >
+
         <TextView
+            android:id="@+id/nameField"
             android:text="Event Name:"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:textSize="20dp"
             android:gravity="center"
-            android:id="@+id/nameField"
             android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <EditText
+            android:id="@+id/addNameField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
+            android:layout_below="@id/nameField"
+
             android:inputType="textPersonName"
             android:text=""
             android:gravity="center"
             android:ems="10"
-            android:id="@+id/addNameField"
             android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <TextView
-            android:text="Date:"
+            android:id="@+id/dateField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+
+            android:layout_below="@id/addNameField"
+
+            android:text="Date:"
             android:textSize="20dp"
             android:gravity="center"
-            android:id="@+id/dateField"
             android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <EditText
+            android:id="@+id/addDateField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
+            android:layout_below="@id/dateField"
+
             android:inputType="date"
             android:gravity="center"
             android:ems="10"
-            android:id="@+id/addDateField"
             android:hint="MM/DD/YYYY"
             android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <TextView
-            android:text="Time:"
+            android:id="@+id/timeField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+
+            android:layout_below="@id/addDateField"
+
+            android:text="Time:"
             android:textSize="20dp"
             android:gravity="center"
-            android:id="@+id/timeField"
             android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <EditText
+            android:id="@+id/addTimeField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
+            android:layout_below="@id/timeField"
+
             android:inputType="time"
             android:gravity="center"
             android:ems="10"
-            android:id="@+id/addTimeField"
             android:hint="24-HH:MM"
             android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <TextView
-            android:text="Location:"
+            android:id="@+id/locationField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+
+            android:layout_below="@id/addTimeField"
+
+            android:text="Location:"
             android:textSize="20dp"
             android:gravity="center"
-            android:id="@+id/locationField"
             android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <EditText
+            android:id="@+id/addLocationField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
+            android:layout_below="@id/locationField"
+
             android:inputType="textPostalAddress"
             android:gravity="center"
             android:ems="10"
-            android:id="@+id/addLocationField"
             android:textColor="@color/common_google_signin_btn_text_dark_default" />
-    </LinearLayout>
-</android.support.design.widget.CoordinatorLayout>
+    </RelativeLayout>
+
+
+
+
+    <!-- Old Stuff Below -->
+    <!--
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.example.tbecker012.soccermomsapp.AddEventsActivity"
+        android:background="@color/colorPrimaryDark">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimaryDark"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <include layout="@layout/content_add_events" />
+
+        <TextView
+            android:text="Add / Update Events"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="60dp"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:id="@+id/textView17"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+        <Button
+            android:text="Main Menu"
+            android:layout_width="190dp"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="560dp"
+            android:id="@+id/mainMenuButton" />
+
+
+            android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
+
+
+        <Button
+            android:text="Finish Events"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="560dp"
+            android:layout_marginLeft="190dp"
+            android:id="@+id/doneButton"
+            android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            android:layout_marginTop="100dp">
+
+            <Button
+                android:text="Add/Save Event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/addEventButton"
+                android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
+
+            <TextView
+                android:text="Event Name:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:id="@+id/nameField"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text=""
+                android:gravity="center"
+                android:ems="10"
+                android:id="@+id/addNameField"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+            <TextView
+                android:text="Date:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:id="@+id/dateField"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:gravity="center"
+                android:ems="10"
+                android:id="@+id/addDateField"
+                android:hint="MM/DD/YYYY"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+            <TextView
+                android:text="Time:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:id="@+id/timeField"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="time"
+                android:gravity="center"
+                android:ems="10"
+                android:id="@+id/addTimeField"
+                android:hint="24-HH:MM"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+            <TextView
+                android:text="Location:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:id="@+id/locationField"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:gravity="center"
+                android:ems="10"
+                android:id="@+id/addLocationField"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+        </LinearLayout>
+        </android.support.design.widget.CoordinatorLayout>-->
+</RelativeLayout>
+
