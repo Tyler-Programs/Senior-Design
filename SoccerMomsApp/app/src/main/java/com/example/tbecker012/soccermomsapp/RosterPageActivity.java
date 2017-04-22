@@ -56,6 +56,8 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         /*********
         *
          */
+
+        
         nf1 = (EditText) findViewById(R.id.nameField1);
         nf2 = (EditText) findViewById(R.id.nameField2);
         nf3 = (EditText) findViewById(R.id.nameField3);
