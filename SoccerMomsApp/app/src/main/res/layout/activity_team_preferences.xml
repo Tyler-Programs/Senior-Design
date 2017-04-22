@@ -50,7 +50,11 @@
         android:layout_marginTop="510dp"
         android:layout_marginLeft="190dp"
         android:id="@+id/donePreferencesButton"
+
+        android:textSize="12sp" />
+
         android:background="@color/common_google_signin_btn_text_dark_default" />
+
 
     <LinearLayout
         android:orientation="vertical"

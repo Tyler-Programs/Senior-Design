@@ -1,17 +1,650 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.example.tbecker012.soccermomsapp.RosterPageActivity"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorPrimaryDark"
+    android:padding="5dp">
 
     <TextView
-        android:text="           Team Roster"
-        android:layout_width="282dp"
         android:id="@+id/textView3"
+        android:text="Team Roster"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textSize="30sp"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+    <GridLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView3"
+        android:rowCount="1"
+        android:columnCount="2">
+
+        <Button
+            android:layout_margin="5dp"
+            android:text="Add Player"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/addButton"
+            android:layout_rowSpan="1"
+            android:layout_columnSpan="1"
+            android:layout_columnWeight="1"
+            android:background="@color/common_google_signin_btn_text_dark_default" />
+
+        <Button
+            android:layout_margin="5dp"
+            android:text="Update"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_rowSpan="1"
+            android:layout_columnSpan="1"
+            android:layout_columnWeight="1"
+            android:id="@+id/updateButton"
+            android:background="@color/common_google_signin_btn_text_dark_default" />
+
+    </GridLayout>
+
+    <Button
+        android:text="Main Menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:id="@+id/homeButton"
+
+        android:background="@color/common_google_signin_btn_text_dark_default" />
+
+    <ScrollView
+        android:layout_below="@id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+        <!-- Player Info Below -->
+        <RelativeLayout
+        android:id="@+id/player1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_height="35dp"
+            android:layout_width="wrap_content"
+
+            android:id="@+id/nameTextView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="Name:"
+            android:textColor="@color/common_google_signin_btn_text_dark_default">
+        </TextView>
+
+        <EditText
+            android:id="@+id/nameField1"
+            android:layout_toRightOf="@id/nameTextView"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+
+            android:inputType="textPersonName"
+            android:text=""
+            android:textSize="12sp"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+
+
+        <TextView
+            android:layout_height="35dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/numberTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/nameField1"
+            android:gravity="center"
+            android:text="Num:"
+            android:textColor="@color/common_google_signin_btn_text_dark_default">
+        </TextView>
+
+        <EditText
+            android:id="@+id/numberField1"
+            android:layout_toRightOf="@id/numberTextView"
+            android:layout_below="@id/nameField1"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:textSize="12sp"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+        <Spinner
+            android:layout_width="150dp"
+            android:layout_height="32dp"
+
+
+            android:id="@+id/posSpinner1"
+            android:layout_toRightOf="@id/numberField1"
+            android:layout_below="@id/nameField1"
+            android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
+
+            <TextView
+                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:id="@+id/ageTextView"
+                android:layout_toRightOf="@id/posSpinner1"
+                android:gravity="center"
+                android:text="Age:"
+                android:textColor="@color/common_google_signin_btn_text_dark_default">
+            </TextView>
+
+            <EditText
+                android:id="@+id/ageField1"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+        <TextView
+            android:layout_height="35dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/gradeTextView"
+            android:layout_below="@id/nameField1"
+            android:layout_toRightOf="@id/posSpinner1"
+            android:gravity="center"
+            android:text="Grade:"
+            android:textColor="@color/common_google_signin_btn_text_dark_default">
+        </TextView>
+
+        <EditText
+            android:id="@+id/gradeField1"
+            android:layout_toRightOf="@id/gradeTextView"
+            android:layout_below="@id/nameField1"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:textSize="12sp"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+        <View
+            android:id="@+id/spacer1"
+            android:layout_height="15dp"
+            android:layout_width="match_parent"
+            android:layout_below="@id/gradeField1">
+        </View>
+<!-- NEXT PLAYER -->
+        <TextView
+            android:layout_height="35dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/nameTextView2"
+
+            android:layout_below="@id/spacer1"
+
+            android:gravity="center"
+            android:text="Name:"
+            android:textColor="@color/common_google_signin_btn_text_dark_default">
+        </TextView>
+        <EditText
+            android:id="@+id/nameField2"
+            android:layout_toRightOf="@id/nameTextView2"
+            android:layout_below="@id/spacer1"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="5dp"
+
+            android:inputType="textPersonName"
+            android:text=""
+            android:textSize="12sp"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+
+        <TextView
+            android:layout_height="35dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/numberTextView2"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/nameField2"
+            android:gravity="center"
+            android:text="Num:"
+            android:textColor="@color/common_google_signin_btn_text_dark_default">
+        </TextView>
+
+        <EditText
+            android:id="@+id/numberField2"
+            android:layout_toRightOf="@id/numberTextView2"
+            android:layout_below="@id/nameField2"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:textSize="12sp"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+        <Spinner
+            android:layout_width="150dp"
+            android:layout_height="32dp"
+
+            android:id="@+id/posSpinner2"
+            android:layout_toRightOf="@id/numberField2"
+            android:layout_below="@id/nameField2"
+            android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
+
+            <TextView
+                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:id="@+id/ageTextView2"
+                android:layout_toRightOf="@id/posSpinner2"
+                android:layout_below="@id/spacer1"
+                android:gravity="center"
+                android:text="Age:"
+                android:textColor="@color/common_google_signin_btn_text_dark_default">
+            </TextView>
+            <EditText
+                android:id="@+id/ageField2"
+                android:layout_toRightOf="@id/ageTextView2"
+                android:layout_below="@id/spacer1"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+        <TextView
+            android:layout_height="35dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/gradeTextView2"
+            android:layout_below="@id/nameField2"
+            android:layout_toRightOf="@id/posSpinner2"
+            android:gravity="center"
+            android:text="Grade:"
+            android:textColor="@color/common_google_signin_btn_text_dark_default">
+        </TextView>
+
+        <EditText
+            android:id="@+id/gradeField2"
+            android:layout_toRightOf="@id/gradeTextView2"
+            android:layout_below="@id/nameField2"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:textSize="12sp"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+            <View
+                android:id="@+id/spacer2"
+                android:layout_height="15dp"
+                android:layout_width="match_parent"
+                android:layout_below="@id/gradeField2">
+            </View>
+<!-- NEXT PLAYER -->
+            <TextView
+                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:id="@+id/nameTextView3"
+
+                android:layout_below="@id/spacer2"
+
+                android:gravity="center"
+                android:text="Name:"
+                android:textColor="@color/common_google_signin_btn_text_dark_default">
+            </TextView>
+
+            <EditText
+                android:id="@+id/nameField3"
+                android:layout_toRightOf="@id/nameTextView3"
+                android:layout_below="@id/spacer2"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+
+                android:inputType="textPersonName"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+
+
+            <TextView
+                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:id="@+id/numberTextView3"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/nameField3"
+                android:gravity="center"
+                android:text="Num:"
+                android:textColor="@color/common_google_signin_btn_text_dark_default">
+            </TextView>
+            <EditText
+                android:id="@+id/numberField3"
+                android:layout_toRightOf="@id/numberTextView3"
+                android:layout_below="@id/nameField3"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+
+                android:gravity="center"
+                android:inputType="number"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+            <Spinner
+                android:layout_width="150dp"
+                android:layout_height="32dp"
+
+                android:id="@+id/posSpinner3"
+                android:layout_toRightOf="@id/numberField3"
+                android:layout_below="@id/nameField3"
+                android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
+
+            <TextView
+                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:id="@+id/ageTextView3"
+                android:layout_toRightOf="@id/posSpinner3"
+                android:layout_below="@id/spacer2"
+                android:gravity="center"
+                android:text="Age:"
+                android:textColor="@color/common_google_signin_btn_text_dark_default">
+            </TextView>
+
+            <EditText
+                android:id="@+id/ageField3"
+                android:layout_toRightOf="@id/ageTextView3"
+                android:layout_below="@id/spacer2"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+            <TextView
+                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:id="@+id/gradeTextView3"
+                android:layout_below="@id/nameField3"
+                android:layout_toRightOf="@id/posSpinner3"
+                android:gravity="center"
+                android:text="Grade:"
+                android:textColor="@color/common_google_signin_btn_text_dark_default">
+            </TextView>
+            <EditText
+                android:id="@+id/gradeField3"
+                android:layout_toRightOf="@id/gradeTextView3"
+                android:layout_below="@id/nameField3"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+
+                android:gravity="center"
+                android:inputType="number"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+            <View
+                android:id="@+id/spacer3"
+                android:layout_height="15dp"
+                android:layout_width="match_parent"
+                android:layout_below="@id/gradeField3">
+            </View>
+            <!-- NEXT PLAYER -->
+            <TextView android:id="@+id/nameTextView4"
+            android:layout_height="35dp"
+            android:layout_width="wrap_content"
+
+            android:layout_below="@id/spacer3"
+
+            android:gravity="center"
+            android:text="Name:"
+            android:textColor="@color/common_google_signin_btn_text_dark_default">
+        </TextView>
+
+            <EditText
+                android:id="@+id/nameField4"
+                android:layout_toRightOf="@id/nameTextView4"
+                android:layout_below="@id/spacer3"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+
+                android:inputType="textPersonName"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+
+
+            <TextView
+                android:id="@+id/numberTextView4"
+                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/nameField4"
+                android:gravity="center"
+                android:text="Num:"
+                android:textColor="@color/common_google_signin_btn_text_dark_default">
+            </TextView>
+            <EditText
+                android:id="@+id/numberField4"
+                android:layout_toRightOf="@id/numberTextView4"
+                android:layout_below="@id/nameField4"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+
+                android:gravity="center"
+                android:inputType="number"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+            <Spinner
+                android:id="@+id/posSpinner4"
+                android:layout_width="150dp"
+                android:layout_height="32dp"
+
+                android:layout_toRightOf="@id/numberField4"
+                android:layout_below="@id/nameField4"
+                android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
+
+            <TextView
+                android:id="@+id/ageTextView4"
+                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+
+                android:layout_toRightOf="@id/posSpinner4"
+                android:layout_below="@id/spacer3"
+                android:gravity="center"
+                android:text="Age:"
+                android:textColor="@color/common_google_signin_btn_text_dark_default">
+            </TextView>
+
+            <EditText
+                android:id="@+id/ageField4"
+                android:layout_toRightOf="@id/ageTextView4"
+                android:layout_below="@id/spacer3"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+            <TextView
+                android:id="@+id/gradeTextView4"
+                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+
+                android:layout_below="@id/nameField4"
+                android:layout_toRightOf="@id/posSpinner4"
+                android:gravity="center"
+                android:text="Grade:"
+                android:textColor="@color/common_google_signin_btn_text_dark_default">
+            </TextView>
+            <EditText
+                android:id="@+id/gradeField4"
+                android:layout_toRightOf="@id/gradeTextView4"
+                android:layout_below="@id/nameField4"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+
+                android:gravity="center"
+                android:inputType="number"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+            <View
+                android:id="@+id/spacer4"
+                android:layout_height="15dp"
+                android:layout_width="match_parent"
+                android:layout_below="@id/gradeField4">
+            </View>
+<!-- NEXT PLAYER -->
+            <TextView
+                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:id="@+id/nameTextView5"
+                android:layout_below="@id/spacer4"
+                android:gravity="center"
+                android:text="Name:"
+                android:textColor="@color/common_google_signin_btn_text_dark_default">
+            </TextView>
+            <EditText
+                android:id="@+id/nameField5"
+                android:layout_toRightOf="@id/nameTextView5"
+                android:layout_below="@id/spacer4"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:inputType="textPersonName"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+            <TextView
+                android:id="@+id/numberTextView5"
+                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:text="Num:"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:layout_below="@+id/nameField5"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+            </TextView>
+            <EditText
+                android:id="@+id/numberField5"
+                android:layout_toRightOf="@id/numberTextView5"
+                android:layout_below="@id/nameField5"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+            <Spinner
+                android:id="@+id/posSpinner5"
+                android:layout_width="150dp"
+                android:layout_height="32dp"
+                android:layout_toRightOf="@id/numberField5"
+                android:layout_below="@id/nameField5"
+                android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
+
+            <TextView
+                android:id="@+id/ageTextView5"
+                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/posSpinner5"
+                android:layout_below="@id/spacer4"
+                android:gravity="center"
+                android:text="Age:"
+                android:textColor="@color/common_google_signin_btn_text_dark_default">
+            </TextView>
+            <EditText
+                android:id="@+id/ageField5"
+                android:layout_toRightOf="@id/ageTextView5"
+                android:layout_below="@id/spacer4"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+            <TextView
+                android:id="@+id/gradeTextView5"
+                android:layout_height="35dp"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/nameField5"
+                android:layout_toRightOf="@id/posSpinner5"
+                android:gravity="center"
+                android:text="Grade:"
+                android:textColor="@color/common_google_signin_btn_text_dark_default">
+            </TextView>
+            <EditText
+                android:id="@+id/gradeField5"
+                android:layout_toRightOf="@id/gradeTextView5"
+                android:layout_below="@id/nameField4"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:text=""
+                android:textSize="12sp"
+                android:textColor="@color/common_google_signin_btn_text_dark_default" />
+            <View
+                android:id="@+id/spacer5"
+                android:layout_height="15dp"
+                android:layout_width="match_parent"
+                android:layout_below="@id/gradeField5">
+            </View>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
+<!-- Old stuff below -->
+<!--
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.tbecker012.soccermomsapp.RosterPageActivity"
+    android:background="@color/colorPrimaryDark">
+
+    &lt;!&ndash;<TextView
+        android:id="@+id/textView3"
+        android:text="Team Roster"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textStyle="normal|bold"
@@ -21,10 +654,13 @@
     <Button
         android:text="Main Menu"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="515dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="560dp"
         android:id="@+id/homeButton"
-        android:background="@color/common_google_signin_btn_text_dark_default" />
+
+        android:background="@color/common_google_signin_btn_text_dark_default" />&ndash;&gt;
+
 
 
     <ScrollView
@@ -38,7 +674,7 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <!--
+            &lt;!&ndash;
                 xxxxxxxxxxxxxxxxxxxxxx
 
 
@@ -46,7 +682,7 @@
 
 
                 xxxxxxxxxxxxxxxxxxxxx
-            -->
+            &ndash;&gt;
 
             <LinearLayout
                 android:layout_width="90dp"
@@ -456,7 +1092,7 @@
                 </EditText>
             </LinearLayout>
 
-            <!--
+            &lt;!&ndash;
                 xxxxxxxxxxxxxxxxxxxxxx
 
 
@@ -464,7 +1100,7 @@
 
 
                 xxxxxxxxxxxxxxxxxxxxx
-            -->
+            &ndash;&gt;
 
             <LinearLayout
                 android:layout_width="30dp"
@@ -914,7 +1550,7 @@
 
             </LinearLayout>
 
-            <!--
+            &lt;!&ndash;
                 xxxxxxxxxxxxxxxxxxxxxx
 
 
@@ -922,7 +1558,7 @@
 
 
                 xxxxxxxxxxxxxxxxxxxxx
-            -->
+            &ndash;&gt;
 
             <LinearLayout
                 android:layout_width="50dp"
@@ -932,14 +1568,16 @@
 
                 <EditText
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
+                    android:layout_height="wrap_content"
                     android:inputType="number"
                     android:text=""
                     android:ems="10"
                     android:id="@+id/numField1"
+
                     android:textSize="12sp"
                     android:layout_weight="1"
                     android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -1371,7 +2009,7 @@
                     android:textColor="@color/common_google_signin_btn_text_dark_default" />
             </LinearLayout>
 
-            <!--
+            &lt;!&ndash;
                 xxxxxxxxxxxxxxxxxxxxxx
 
 
@@ -1379,7 +2017,7 @@
 
 
                 xxxxxxxxxxxxxxxxxxxxx
-            -->
+            &ndash;&gt;
 
             <LinearLayout
                 android:layout_width="80dp"
@@ -1388,287 +2026,311 @@
                 android:orientation="vertical" >
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
+
                     android:id="@+id/posSpinner1"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner2"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/spinner5"
+                    android:layout_weight="1" />
+
+                <Spinner
+                    android:layout_width="95dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/spinner4"
+                    android:layout_weight="1" />
+
+                <Spinner
+                    android:layout_width="95dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/spinner3"
+                    android:layout_weight="1" />
+
+                <Spinner
+                    android:layout_width="95dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/spinner2" />
+
+                <Spinner
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner3"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner4"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner5"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner6"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner7"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner8"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner9"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner10"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner11"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner12"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner13"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner14"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner15"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner16"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner17"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner18"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner19"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner20"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner21"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner22"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner23"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner24"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner25"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner26"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner27"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner28"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner29"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner30"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner31"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner32"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner33"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner34"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner35"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner36"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner37"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner38"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner39"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
                 <Spinner
-                    android:layout_width="match_parent"
+                    android:layout_width="95dp"
                     android:layout_height="32dp"
                     android:id="@+id/posSpinner40"
                     android:layout_weight="1"
                     android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
             </LinearLayout>
 
-            <!--
+            &lt;!&ndash;
                 xxxxxxxxxxxxxxxxxxxxxx
 
 
@@ -1676,7 +2338,7 @@
 
 
                 xxxxxxxxxxxxxxxxxxxxx
-            -->
+            &ndash;&gt;
 
             <LinearLayout
                 android:layout_width="50dp"
@@ -1685,7 +2347,7 @@
                 android:orientation="vertical" >
 
                 <EditText
-                    android:layout_width="78dp"
+                    android:layout_width="59dp"
                     android:inputType="textPersonName"
                     android:text=""
                     android:ems="10"
@@ -2086,7 +2748,7 @@
                 </EditText>
             </LinearLayout>
 
-            <!--
+            &lt;!&ndash;
                 xxxxxxxxxxxxxxxxxxxxxx
 
 
@@ -2094,7 +2756,7 @@
 
 
                 xxxxxxxxxxxxxxxxxxxxx
-            -->
+            &ndash;&gt;
 
             <LinearLayout
                 android:layout_width="60dp"
@@ -2545,3 +3207,4 @@
 
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
+-->

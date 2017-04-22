@@ -47,6 +47,7 @@ public class ScoreboardActivity extends AppCompatActivity implements EditText.On
         oppSF.setEnabled(false);
 
         gcMinutes = (EditText) findViewById(R.id.gcMinField);
+        gcMinutes.setText(new FileManager(getTeamName()).getPreferredTime(getApplicationContext())); // set the preferred time
         gcSeconds = (EditText) findViewById(R.id.gcSecField);
         pcMinutes = (EditText) findViewById(R.id.pcMinField);
         pcSeconds = (EditText) findViewById(R.id.pcSecField);
@@ -67,8 +68,12 @@ public class ScoreboardActivity extends AppCompatActivity implements EditText.On
         hb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//<<<<<<< HEAD
+                startActivity(new Intent(ScoreboardActivity.this, DirectoryActivity.class).putExtra("Team_Name",getTeamName()));
+//=======
                 moveTaskToBack(true);
-                startActivity(new Intent(ScoreboardActivity.this, DirectoryActivity.class));
+                startActivity(new Intent(ScoreboardActivity.this, DirectoryActivity.class).putExtra("Team_Name",getTeamName()));
+//>>>>>>> refs/remotes/origin/master
             }
         });
     }
@@ -321,6 +326,17 @@ public class ScoreboardActivity extends AppCompatActivity implements EditText.On
             pcdt.cancel();
             pcdt = null;
         }
+    }
+
+    private String getTeamName() // get the string sent from the TeamPreferencesActivity
+    {
+        String newString;
+        Bundle extras = getIntent().getExtras();
+        if(extras == null) // is there any strings
+            newString = null;
+        else
+            newString = extras.getString("Team_Name"); // retrieve the string
+        return newString;
     }
 
     public void updateGoalScorer(){

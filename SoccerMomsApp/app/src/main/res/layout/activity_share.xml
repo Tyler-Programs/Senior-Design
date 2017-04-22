@@ -41,6 +41,7 @@
         android:ems="10"
         android:gravity="center"
         android:id="@+id/emailField"
+        android:hint="Email" />
         android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
     <Button
@@ -64,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="309dp"
         android:inputType="textMultiLine"
-        android:text="Once you have successfully received the emailed roster: \n\n(1) Plug your smartphone into your computer using the USB cord.\n(2) Open Windows Explorer on your computer.\n(3) On the left-side of your screen, click on the 'Downloads' folder.\n(4) Find the roster.txt file, right-click on it, and select 'Copy.'\n(5) On the left-side of your screen, open 'My Computer','This PC', etc.\n(6) In this directory, you should see a link to your Samsung Device.  Click on it.\n(7) Double-click on 'Phone,' then 'My Documents.'  Press Ctrl+V on your keyboard.\n(8) Your app will now be able to find the roster file and import it into your team's profile."
+        android:text="Once you have successfully received the emailed roster: \n\n(1) Plug your smartphone into your computer using the USB cord.\n(2) Open Windows Explorer on your computer.\n(3) On the left-side of your screen, click on the 'Downloads' folder.\n(4) Find the roster.txt file, right-click on it, and select 'Copy.'\n(5) On the left-side of your screen, open 'My Computer','This PC', etc.\n(6) In this directory, you should see a link to your Samsung Device.  Click on it.\n(7) Double-click on 'Phone' -> 'My Documents' -> 'Android' -> 'data' -> 'com.example.tbecker012.soccermomsapp' -> 'files' -> 'Documents' -> Your Team -> Press Ctrl+V on your keyboard."
         android:layout_marginTop="200dp"
         android:textSize="14dp"
         android:gravity="center"
