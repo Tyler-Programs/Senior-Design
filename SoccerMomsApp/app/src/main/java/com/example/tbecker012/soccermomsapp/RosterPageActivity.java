@@ -1551,6 +1551,49 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         else {
             list.add(nf5.getText().toString() + "#" + af5.getText().toString() + "#" + nuf5.getText().toString() + "#" + ps5.getSelectedItem().toString() + "#" + gf5.getText().toString());
         }
+        // NEW STUFF HERE
+
+
+        if(nf6.getText().toString() == af6.getText().toString() && nuf6.getText().toString() == gf6.getText().toString() && gf6.getText().toString() == "") // if every entry is empty
+        {
+            // add nothing
+            return list;
+        }
+        else {
+            list.add(nf6.getText().toString() + "#" + af6.getText().toString() + "#" + nuf6.getText().toString() + "#" + ps6.getSelectedItem().toString() + "#" + gf6.getText().toString());
+        }
+        if(nf7.getText().toString() == af7.getText().toString() && nuf7.getText().toString() == gf7.getText().toString() && gf7.getText().toString() == "") // if every entry is empty
+        {
+            // add nothing
+            return list;
+        }
+        else {
+            list.add(nf8.getText().toString() + "#" + af8.getText().toString() + "#" + nuf8.getText().toString() + "#" + ps8.getSelectedItem().toString() + "#" + gf8.getText().toString());
+        }
+        if(nf8.getText().toString() == af8.getText().toString() && nuf8.getText().toString() == gf8.getText().toString() && gf8.getText().toString() == "") // if every entry is empty
+        {
+            // add nothing
+            return list;
+        }
+        else {
+            list.add(nf9.getText().toString() + "#" + af9.getText().toString() + "#" + nuf9.getText().toString() + "#" + ps9.getSelectedItem().toString() + "#" + gf9.getText().toString());
+        }
+        if(nf9.getText().toString() == af9.getText().toString() && nuf9.getText().toString() == gf9.getText().toString() && gf9.getText().toString() == "") // if every entry is empty
+        {
+            // add nothing
+            return list;
+        }
+        else {
+            list.add(nf9.getText().toString() + "#" + af9.getText().toString() + "#" + nuf9.getText().toString() + "#" + ps9.getSelectedItem().toString() + "#" + gf9.getText().toString());
+        }
+        if(nf10.getText().toString() == af10.getText().toString() && nuf10.getText().toString() == gf10.getText().toString() && gf10.getText().toString() == "") // if every entry is empty
+        {
+            // add nothing
+            return list;
+        }
+        else {
+            list.add(nf10.getText().toString() + "#" + af10.getText().toString() + "#" + nuf10.getText().toString() + "#" + ps10.getSelectedItem().toString() + "#" + gf10.getText().toString());
+        }
 
         return list;
     }

@@ -116,7 +116,8 @@ public class AddEventsActivity extends AppCompatActivity implements EditText.OnC
                 do {
                     long id = calCursor.getLong(0);
                     String displayName = calCursor.getString(1);
-                    list[calCursor.getCount()] = id;
+                    if(id != 0)
+                        list[calCursor.getCount()] = id;
                     // …
                 } while (calCursor.moveToNext());
             }
@@ -151,28 +152,37 @@ public class AddEventsActivity extends AppCompatActivity implements EditText.OnC
         endMillis = endTime.getTimeInMillis();
 
 
-        //getCalendarList();
+        long calendars[] = getCalendarList();
 
-        ContentResolver cr = getContentResolver();
-        ContentValues values = new ContentValues();
-        values.put(Events.DTSTART, startMillis);
-        values.put(Events.DTEND, endMillis);
-        values.put(Events.TITLE, nf.getText().toString());
-        values.put(Events.DESCRIPTION, "");
-        values.put(Events.CALENDAR_ID, calID);
-        values.put(Events.EVENT_TIMEZONE, "America/New York");
-        try {
-            Uri uri = cr.insert(Events.CONTENT_URI, values);
-            eventID = Long.parseLong(uri.getLastPathSegment());
-            Log.d("CALENDAR***","AddEventsActivity:  added event");
-            Log.d("CALENDAR***","Cal URI: "+ uri);
-            Log.d("CALENDAR***","CalID: "+Events.CALENDAR_ID);
-        } catch (SecurityException e) {
-            e.printStackTrace();
-            Log.e("CALEDNAR***","AddEventsActivity:  Could not add event");
+
+        Log.d("CALENDAR***: ","list size: "+calendars.length);
+        for(int i=0;i<calendars.length;i++)
+        {
+            if(calendars[i] != 0)
+            {
+                Log.d("CALENDAR***: ","in if statement");
+                ContentResolver cr = getContentResolver();
+                ContentValues values = new ContentValues();
+                values.put(Events.DTSTART, startMillis);
+                values.put(Events.DTEND, endMillis);
+                values.put(Events.TITLE, nf.getText().toString());
+                values.put(Events.DESCRIPTION, "");
+                values.put(Events.CALENDAR_ID, calendars[i]);
+                values.put(Events.EVENT_TIMEZONE, "America/New York");
+                try {
+                    Uri uri = cr.insert(Events.CONTENT_URI, values);
+                    eventID = Long.parseLong(uri.getLastPathSegment());
+                    Log.d("CALENDAR***","AddEventsActivity:  added event");
+                    Log.d("CALENDAR***","Cal URI: "+ uri);
+                    Log.d("CALENDAR***","CalID: "+Events.CALENDAR_ID);
+                } catch (SecurityException e) {
+                    e.printStackTrace();
+                    Log.e("CALEDNAR***","AddEventsActivity:  Could not add event");
+                }
+                //return eventID;
+            }
         }
-            return eventID;
-
+        return eventID;
         /*
         int year, month, day, hour, minute;
         String data = df.getText().toString();
