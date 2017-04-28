@@ -107,8 +107,6 @@ public class FileManager {
                 }
             } else if (newFile.exists()) { // the team has already been created
                 Log.e("error", "Event file already created for: " + teamName);
-                Toast t = Toast.makeText(context, "That file already exists.", Toast.LENGTH_LONG);
-                t.show();
             }
         }
         else{

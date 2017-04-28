@@ -40,20 +40,16 @@
         android:layout_width="190dp"
         android:layout_height="50dp"
         android:layout_marginTop="510dp"
-        android:id="@+id/mainMenuButton"
-        android:background="@color/common_google_signin_btn_text_dark_default" />
+        android:id="@+id/mainMenuButton"/>
 
     <Button
         android:text="Finish Preferences"
-        android:layout_width="match_parent"
+        android:layout_width="190dp"
         android:layout_height="50dp"
         android:layout_marginTop="510dp"
         android:layout_marginLeft="190dp"
         android:id="@+id/donePreferencesButton"
-
-        android:textSize="12sp" />
-
-        android:background="@color/common_google_signin_btn_text_dark_default" />
+        android:textSize="12sp"/>
 
 
     <LinearLayout

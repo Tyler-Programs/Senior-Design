@@ -149,7 +149,7 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         nuf7 = (EditText) findViewById(R.id.numField7);
         nuf8 = (EditText) findViewById(R.id.numField8);
         nuf9 = (EditText) findViewById(R.id.numField9);
-        nuf10 = (EditText) findViewById(R.id.numField10);
+        nuf10 = (EditText) findViewById(R.id.numField11);
         nuf11 = (EditText) findViewById(R.id.numField11);
         nuf12 = (EditText) findViewById(R.id.numField12);
         nuf13 = (EditText) findViewById(R.id.numField13);
@@ -228,6 +228,8 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         hb = (Button) findViewById(R.id.homeButton);
         ub = (Button) findViewById(R.id.updateButton);
         ab = (Button) findViewById(R.id.addButton);
+
+        /*
         cb1 = (Button) findViewById(R.id.clearButton1);
         cb2 = (Button) findViewById(R.id.clearButton2);
         cb3 = (Button) findViewById(R.id.clearButton3);
@@ -268,7 +270,7 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         cb38 = (Button) findViewById(R.id.clearButton38);
         cb39 = (Button) findViewById(R.id.clearButton39);
         cb40 = (Button) findViewById(R.id.clearButton40);
-
+*/
         ps1 = (Spinner) findViewById(R.id.posSpinner1);
         ps2 = (Spinner) findViewById(R.id.posSpinner2);
         ps3 = (Spinner) findViewById(R.id.posSpinner3);
@@ -314,7 +316,7 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         ub.setOnClickListener(this);
-        cb1.setOnClickListener(this);
+        //cb1.setOnClickListener(this);
 
         ab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -399,7 +401,7 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
                 fileManager.rewriteRoster(getRosterData(), getApplicationContext());
 
                 break;
-
+/*
             case R.id.clearButton1:
                 reset_text(nf1, nf2, af1, af2, nuf1, nuf2, ps1, ps2, gf1, gf2);
                 reset_text(nf2, nf3, af2, af3, nuf2, nuf3, ps2, ps3, gf2, gf3);
@@ -1338,7 +1340,7 @@ public class RosterPageActivity extends AppCompatActivity implements EditText.On
 
             case R.id.clearButton40:
                 reset_text(nf40, nf40, af40, af40, nuf40, nuf40, ps40, ps40, gf40, gf40);
-                break;
+                break; */
         }
     }
 

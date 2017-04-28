@@ -2,9 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     tools:context="com.example.tbecker012.soccermomsapp.AddEventsActivity"
     android:background="@color/colorPrimaryDark"
     >
@@ -23,7 +23,7 @@
 
     <Button
         android:id="@+id/addEventButton"
-        android:text="Add/Save Event"
+        android:text="Add Event"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 

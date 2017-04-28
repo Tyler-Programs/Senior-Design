@@ -62,11 +62,12 @@
         android:background="@color/common_google_signin_btn_text_dark_default" />
 
     <ScrollView
-        android:layout_below="@id/buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="5dp"
-        android:paddingRight="5dp">
+        android:paddingRight="5dp"
+        android:layout_above="@+id/homeButton"
+        android:layout_below="@id/buttons">
         <!-- Player Info Below -->
         <RelativeLayout
         android:id="@+id/player1"
@@ -112,7 +113,7 @@
         </TextView>
 
         <EditText
-            android:id="@+id/numberField1"
+            android:id="@+id/numField1"
             android:layout_toRightOf="@id/numberTextView"
             android:layout_below="@id/nameField1"
             android:layout_width="50dp"
@@ -130,7 +131,7 @@
 
 
             android:id="@+id/posSpinner1"
-            android:layout_toRightOf="@id/numberField1"
+            android:layout_toRightOf="@id/numField1"
             android:layout_below="@id/nameField1"
             android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -147,7 +148,7 @@
             <EditText
                 android:id="@+id/ageField1"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/ageTextView"
                 android:layout_width="60dp"
                 android:layout_height="35dp"
                 android:layout_marginLeft="5dp"
@@ -187,7 +188,7 @@
             android:layout_width="match_parent"
             android:layout_below="@id/gradeField1">
         </View>
-<!-- NEXT PLAYER -->
+            <!-- NEXT PLAYER -->
         <TextView
             android:layout_height="35dp"
             android:layout_width="wrap_content"
@@ -225,7 +226,7 @@
         </TextView>
 
         <EditText
-            android:id="@+id/numberField2"
+            android:id="@+id/numField2"
             android:layout_toRightOf="@id/numberTextView2"
             android:layout_below="@id/nameField2"
             android:layout_width="50dp"
@@ -242,7 +243,7 @@
             android:layout_height="32dp"
 
             android:id="@+id/posSpinner2"
-            android:layout_toRightOf="@id/numberField2"
+            android:layout_toRightOf="@id/numField2"
             android:layout_below="@id/nameField2"
             android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -339,7 +340,7 @@
                 android:textColor="@color/common_google_signin_btn_text_dark_default">
             </TextView>
             <EditText
-                android:id="@+id/numberField3"
+                android:id="@+id/numField3"
                 android:layout_toRightOf="@id/numberTextView3"
                 android:layout_below="@id/nameField3"
                 android:layout_width="50dp"
@@ -355,7 +356,7 @@
                 android:layout_height="32dp"
 
                 android:id="@+id/posSpinner3"
-                android:layout_toRightOf="@id/numberField3"
+                android:layout_toRightOf="@id/numField3"
                 android:layout_below="@id/nameField3"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -450,7 +451,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField4"
+                android:id="@+id/numField4"
                 android:layout_toRightOf="@id/numberTextView4"
                 android:layout_below="@id/nameField4"
                 android:layout_width="50dp"
@@ -467,7 +468,7 @@
                 android:layout_width="150dp"
                 android:layout_height="32dp"
 
-                android:layout_toRightOf="@id/numberField4"
+                android:layout_toRightOf="@id/numField4"
                 android:layout_below="@id/nameField4"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -564,7 +565,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField5"
+                android:id="@+id/numField5"
                 android:layout_toRightOf="@id/numberTextView5"
                 android:layout_below="@id/nameField5"
                 android:layout_width="50dp"
@@ -579,7 +580,7 @@
                 android:id="@+id/posSpinner5"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField5"
+                android:layout_toRightOf="@id/numField5"
                 android:layout_below="@id/nameField5"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -672,7 +673,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField6"
+                android:id="@+id/numField6"
                 android:layout_toRightOf="@id/numberTextView6"
                 android:layout_below="@id/nameField6"
                 android:layout_width="50dp"
@@ -687,7 +688,7 @@
                 android:id="@+id/posSpinner6"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField6"
+                android:layout_toRightOf="@id/numField6"
                 android:layout_below="@id/nameField6"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -780,7 +781,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField7"
+                android:id="@+id/numField7"
                 android:layout_toRightOf="@id/numberTextView7"
                 android:layout_below="@id/nameField7"
                 android:layout_width="50dp"
@@ -795,7 +796,7 @@
                 android:id="@+id/posSpinner7"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField7"
+                android:layout_toRightOf="@id/numField7"
                 android:layout_below="@id/nameField7"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -888,7 +889,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField8"
+                android:id="@+id/numField8"
                 android:layout_toRightOf="@id/numberTextView8"
                 android:layout_below="@id/nameField8"
                 android:layout_width="50dp"
@@ -903,7 +904,7 @@
                 android:id="@+id/posSpinner8"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField8"
+                android:layout_toRightOf="@id/numField8"
                 android:layout_below="@id/nameField8"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -996,7 +997,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField9"
+                android:id="@+id/numField9"
                 android:layout_toRightOf="@id/numberTextView9"
                 android:layout_below="@id/nameField9"
                 android:layout_width="50dp"
@@ -1011,7 +1012,7 @@
                 android:id="@+id/posSpinner9"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField9"
+                android:layout_toRightOf="@id/numField9"
                 android:layout_below="@id/nameField9"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -1104,7 +1105,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField10"
+                android:id="@+id/numField10"
                 android:layout_toRightOf="@id/numberTextView10"
                 android:layout_below="@id/nameField10"
                 android:layout_width="50dp"
@@ -1119,7 +1120,7 @@
                 android:id="@+id/posSpinner10"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField10"
+                android:layout_toRightOf="@id/numField10"
                 android:layout_below="@id/nameField10"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -1212,7 +1213,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField11"
+                android:id="@+id/numField11"
                 android:layout_toRightOf="@id/numberTextView11"
                 android:layout_below="@id/nameField11"
                 android:layout_width="50dp"
@@ -1227,7 +1228,7 @@
                 android:id="@+id/posSpinner11"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField11"
+                android:layout_toRightOf="@id/numField11"
                 android:layout_below="@id/nameField11"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -1320,7 +1321,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField12"
+                android:id="@+id/numField12"
                 android:layout_toRightOf="@id/numberTextView12"
                 android:layout_below="@id/nameField12"
                 android:layout_width="50dp"
@@ -1335,7 +1336,7 @@
                 android:id="@+id/posSpinner12"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField12"
+                android:layout_toRightOf="@id/numField12"
                 android:layout_below="@id/nameField12"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -1428,7 +1429,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField13"
+                android:id="@+id/numField13"
                 android:layout_toRightOf="@id/numberTextView13"
                 android:layout_below="@id/nameField13"
                 android:layout_width="50dp"
@@ -1443,7 +1444,7 @@
                 android:id="@+id/posSpinner13"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField13"
+                android:layout_toRightOf="@id/numField13"
                 android:layout_below="@id/nameField13"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -1536,7 +1537,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField14"
+                android:id="@+id/numField14"
                 android:layout_toRightOf="@id/numberTextView14"
                 android:layout_below="@id/nameField14"
                 android:layout_width="50dp"
@@ -1551,7 +1552,7 @@
                 android:id="@+id/posSpinner14"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField14"
+                android:layout_toRightOf="@id/numField14"
                 android:layout_below="@id/nameField14"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -1644,7 +1645,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField15"
+                android:id="@+id/numField15"
                 android:layout_toRightOf="@id/numberTextView15"
                 android:layout_below="@id/nameField15"
                 android:layout_width="50dp"
@@ -1659,7 +1660,7 @@
                 android:id="@+id/posSpinner15"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField15"
+                android:layout_toRightOf="@id/numField15"
                 android:layout_below="@id/nameField15"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -1752,7 +1753,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField16"
+                android:id="@+id/numField16"
                 android:layout_toRightOf="@id/numberTextView16"
                 android:layout_below="@id/nameField16"
                 android:layout_width="50dp"
@@ -1767,7 +1768,7 @@
                 android:id="@+id/posSpinner16"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField16"
+                android:layout_toRightOf="@id/numField16"
                 android:layout_below="@id/nameField16"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -1860,7 +1861,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField17"
+                android:id="@+id/numField17"
                 android:layout_toRightOf="@id/numberTextView17"
                 android:layout_below="@id/nameField17"
                 android:layout_width="50dp"
@@ -1875,7 +1876,7 @@
                 android:id="@+id/posSpinner17"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField17"
+                android:layout_toRightOf="@id/numField17"
                 android:layout_below="@id/nameField17"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -1968,7 +1969,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField18"
+                android:id="@+id/numField18"
                 android:layout_toRightOf="@id/numberTextView18"
                 android:layout_below="@id/nameField18"
                 android:layout_width="50dp"
@@ -1983,7 +1984,7 @@
                 android:id="@+id/posSpinner18"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField18"
+                android:layout_toRightOf="@id/numField18"
                 android:layout_below="@id/nameField18"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -2076,7 +2077,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField19"
+                android:id="@+id/numField19"
                 android:layout_toRightOf="@id/numberTextView19"
                 android:layout_below="@id/nameField19"
                 android:layout_width="50dp"
@@ -2091,7 +2092,7 @@
                 android:id="@+id/posSpinner19"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField19"
+                android:layout_toRightOf="@id/numField19"
                 android:layout_below="@id/nameField19"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -2184,7 +2185,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField20"
+                android:id="@+id/numField20"
                 android:layout_toRightOf="@id/numberTextView20"
                 android:layout_below="@id/nameField20"
                 android:layout_width="50dp"
@@ -2199,7 +2200,7 @@
                 android:id="@+id/posSpinner20"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField20"
+                android:layout_toRightOf="@id/numField20"
                 android:layout_below="@id/nameField20"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -2292,7 +2293,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField21"
+                android:id="@+id/numField21"
                 android:layout_toRightOf="@id/numberTextView21"
                 android:layout_below="@id/nameField21"
                 android:layout_width="50dp"
@@ -2307,7 +2308,7 @@
                 android:id="@+id/posSpinner21"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField21"
+                android:layout_toRightOf="@id/numField21"
                 android:layout_below="@id/nameField21"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -2400,7 +2401,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField22"
+                android:id="@+id/numField22"
                 android:layout_toRightOf="@id/numberTextView22"
                 android:layout_below="@id/nameField22"
                 android:layout_width="50dp"
@@ -2415,7 +2416,7 @@
                 android:id="@+id/posSpinner22"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField22"
+                android:layout_toRightOf="@id/numField22"
                 android:layout_below="@id/nameField22"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -2508,7 +2509,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField23"
+                android:id="@+id/numField23"
                 android:layout_toRightOf="@id/numberTextView23"
                 android:layout_below="@id/nameField23"
                 android:layout_width="50dp"
@@ -2523,7 +2524,7 @@
                 android:id="@+id/posSpinner23"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField23"
+                android:layout_toRightOf="@id/numField23"
                 android:layout_below="@id/nameField23"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -2616,7 +2617,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField24"
+                android:id="@+id/numField24"
                 android:layout_toRightOf="@id/numberTextView24"
                 android:layout_below="@id/nameField24"
                 android:layout_width="50dp"
@@ -2631,7 +2632,7 @@
                 android:id="@+id/posSpinner24"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField24"
+                android:layout_toRightOf="@id/numField24"
                 android:layout_below="@id/nameField24"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -2724,7 +2725,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField25"
+                android:id="@+id/numField25"
                 android:layout_toRightOf="@id/numberTextView25"
                 android:layout_below="@id/nameField25"
                 android:layout_width="50dp"
@@ -2739,7 +2740,7 @@
                 android:id="@+id/posSpinner25"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField25"
+                android:layout_toRightOf="@id/numField25"
                 android:layout_below="@id/nameField25"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -2832,7 +2833,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField26"
+                android:id="@+id/numField26"
                 android:layout_toRightOf="@id/numberTextView26"
                 android:layout_below="@id/nameField26"
                 android:layout_width="50dp"
@@ -2847,7 +2848,7 @@
                 android:id="@+id/posSpinner26"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField26"
+                android:layout_toRightOf="@id/numField26"
                 android:layout_below="@id/nameField26"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -2940,7 +2941,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField27"
+                android:id="@+id/numField27"
                 android:layout_toRightOf="@id/numberTextView27"
                 android:layout_below="@id/nameField27"
                 android:layout_width="50dp"
@@ -2955,7 +2956,7 @@
                 android:id="@+id/posSpinner27"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField27"
+                android:layout_toRightOf="@id/numField27"
                 android:layout_below="@id/nameField27"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -3048,7 +3049,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField28"
+                android:id="@+id/numField28"
                 android:layout_toRightOf="@id/numberTextView28"
                 android:layout_below="@id/nameField28"
                 android:layout_width="50dp"
@@ -3063,7 +3064,7 @@
                 android:id="@+id/posSpinner28"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField28"
+                android:layout_toRightOf="@id/numField28"
                 android:layout_below="@id/nameField28"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -3156,7 +3157,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField29"
+                android:id="@+id/numField29"
                 android:layout_toRightOf="@id/numberTextView29"
                 android:layout_below="@id/nameField29"
                 android:layout_width="50dp"
@@ -3171,7 +3172,7 @@
                 android:id="@+id/posSpinner29"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField29"
+                android:layout_toRightOf="@id/numField29"
                 android:layout_below="@id/nameField29"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -3264,7 +3265,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField30"
+                android:id="@+id/numField30"
                 android:layout_toRightOf="@id/numberTextView30"
                 android:layout_below="@id/nameField30"
                 android:layout_width="50dp"
@@ -3279,7 +3280,7 @@
                 android:id="@+id/posSpinner30"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField30"
+                android:layout_toRightOf="@id/numField30"
                 android:layout_below="@id/nameField30"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -3372,7 +3373,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField31"
+                android:id="@+id/numField31"
                 android:layout_toRightOf="@id/numberTextView31"
                 android:layout_below="@id/nameField31"
                 android:layout_width="50dp"
@@ -3387,7 +3388,7 @@
                 android:id="@+id/posSpinner31"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField31"
+                android:layout_toRightOf="@id/numField31"
                 android:layout_below="@id/nameField31"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -3480,7 +3481,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField32"
+                android:id="@+id/numField32"
                 android:layout_toRightOf="@id/numberTextView32"
                 android:layout_below="@id/nameField32"
                 android:layout_width="50dp"
@@ -3495,7 +3496,7 @@
                 android:id="@+id/posSpinner32"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField32"
+                android:layout_toRightOf="@id/numField32"
                 android:layout_below="@id/nameField32"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -3588,7 +3589,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField33"
+                android:id="@+id/numField33"
                 android:layout_toRightOf="@id/numberTextView33"
                 android:layout_below="@id/nameField33"
                 android:layout_width="50dp"
@@ -3603,7 +3604,7 @@
                 android:id="@+id/posSpinner33"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField33"
+                android:layout_toRightOf="@id/numField33"
                 android:layout_below="@id/nameField33"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -3696,7 +3697,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField34"
+                android:id="@+id/numField34"
                 android:layout_toRightOf="@id/numberTextView34"
                 android:layout_below="@id/nameField34"
                 android:layout_width="50dp"
@@ -3711,7 +3712,7 @@
                 android:id="@+id/posSpinner34"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField34"
+                android:layout_toRightOf="@id/numField34"
                 android:layout_below="@id/nameField34"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -3804,7 +3805,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField35"
+                android:id="@+id/numField35"
                 android:layout_toRightOf="@id/numberTextView35"
                 android:layout_below="@id/nameField35"
                 android:layout_width="50dp"
@@ -3819,7 +3820,7 @@
                 android:id="@+id/posSpinner35"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField35"
+                android:layout_toRightOf="@id/numField35"
                 android:layout_below="@id/nameField35"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -3912,7 +3913,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField36"
+                android:id="@+id/numField36"
                 android:layout_toRightOf="@id/numberTextView36"
                 android:layout_below="@id/nameField36"
                 android:layout_width="50dp"
@@ -3927,7 +3928,7 @@
                 android:id="@+id/posSpinner36"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField36"
+                android:layout_toRightOf="@id/numField36"
                 android:layout_below="@id/nameField36"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -4020,7 +4021,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField37"
+                android:id="@+id/numField37"
                 android:layout_toRightOf="@id/numberTextView37"
                 android:layout_below="@id/nameField37"
                 android:layout_width="50dp"
@@ -4035,7 +4036,7 @@
                 android:id="@+id/posSpinner37"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField37"
+                android:layout_toRightOf="@id/numField37"
                 android:layout_below="@id/nameField37"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -4128,7 +4129,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField38"
+                android:id="@+id/numField38"
                 android:layout_toRightOf="@id/numberTextView38"
                 android:layout_below="@id/nameField38"
                 android:layout_width="50dp"
@@ -4143,7 +4144,7 @@
                 android:id="@+id/posSpinner38"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField38"
+                android:layout_toRightOf="@id/numField38"
                 android:layout_below="@id/nameField38"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -4236,7 +4237,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField39"
+                android:id="@+id/numField39"
                 android:layout_toRightOf="@id/numberTextView39"
                 android:layout_below="@id/nameField39"
                 android:layout_width="50dp"
@@ -4251,7 +4252,7 @@
                 android:id="@+id/posSpinner39"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField39"
+                android:layout_toRightOf="@id/numField39"
                 android:layout_below="@id/nameField39"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -4344,7 +4345,7 @@
             </TextView>
 
             <EditText
-                android:id="@+id/numberField40"
+                android:id="@+id/numField40"
                 android:layout_toRightOf="@id/numberTextView40"
                 android:layout_below="@id/nameField40"
                 android:layout_width="50dp"
@@ -4359,7 +4360,7 @@
                 android:id="@+id/posSpinner40"
                 android:layout_width="150dp"
                 android:layout_height="32dp"
-                android:layout_toRightOf="@id/numberField40"
+                android:layout_toRightOf="@id/numField40"
                 android:layout_below="@id/nameField30"
                 android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
 
@@ -4417,6 +4418,370 @@
                 android:layout_below="@id/gradeField40">
             </View>
 
+
+
+<!--
+            <Button
+                android:id="@+id/clearButton1"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer1"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton2"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer2"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton3"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer3"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton4"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer4"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton5"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer5"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton6"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer6"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton7"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer7"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton8"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer8"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton9"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer9"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton10"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer10"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton11"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer11"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton12"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer12"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton13"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer13"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton14"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer14"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton15"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer15"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton16"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer16"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton17"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer17"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton18"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer18"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton19"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer19"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton20"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer20"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton21"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer21"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton22"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer22"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton23"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer23"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton24"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer24"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton25"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer25"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton26"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer26"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton27"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer27"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton28"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer28"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton29"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer29"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton30"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer30"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton31"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer31"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton32"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer32"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton33"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer33"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton34"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer34"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton35"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer35"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton36"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer36"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton37"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer37"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton38"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer38"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton39"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@+id/spacer39"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+            <Button
+                android:id="@+id/clearButton40"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:text="Del"
+                android:textSize="9sp"
+                android:layout_above="@id/spacer40"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                />-->
         </RelativeLayout>
     </ScrollView>
 
@@ -5464,7 +5829,7 @@
                     android:inputType="number"
                     android:text=""
                     android:ems="10"
-                    android:id="@+id/numField10"
+                    android:id="@+id/numField11"
                     android:textSize="12sp"
                     android:layout_weight="1"
                     android:textColor="@color/common_google_signin_btn_text_dark_default" />
