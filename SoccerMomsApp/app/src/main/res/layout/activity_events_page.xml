@@ -2554,16 +2554,14 @@
             android:layout_width="150dp"
             android:layout_height="match_parent"
             android:id="@+id/newEventButton"
-            android:layout_weight="1"
-            android:background="@color/common_google_signin_btn_text_dark_default" />
+            android:layout_weight="1"/>
 
         <Button
             android:text="Save Changes"
             android:layout_width="150dp"
             android:layout_height="match_parent"
             android:id="@+id/saveButton"
-            android:layout_weight="1"
-            android:background="@color/common_google_signin_btn_text_dark_default" />
+            android:layout_weight="1"/>
     </LinearLayout>
 
     <Button

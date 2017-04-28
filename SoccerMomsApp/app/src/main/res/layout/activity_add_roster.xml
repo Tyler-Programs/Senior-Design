@@ -1,4 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.tbecker012.soccermomsapp.AddRosterActivity"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:text="Add / Update Roster"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:id="@+id/textView17"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
+    <Button
+        android:text="Add Player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView17"
+        android:id="@+id/addPlayerButton" />
+    <GridLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:columnCount="2"
+        android:rowCount="1">
+        <Button
+            android:id="@+id/mainMenuButton"
+            android:text="Main Menu"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"/>
+        <Button
+            android:id="@+id/doneRosterButton"
+            android:text="Finish Roster"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"/>
+    </GridLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addPlayerButton"
+        android:layout_above="@id/buttons"
+        android:gravity="center">
+        <TextView
+            android:text="Player Name:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:id="@+id/nameField"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text=""
+            android:gravity="center"
+            android:ems="10"
+            android:id="@+id/addNameField"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+        <TextView
+            android:text="Age:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:id="@+id/ageField"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:gravity="center"
+            android:ems="10"
+            android:id="@+id/addAgeField"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+        <TextView
+            android:text="Number:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:id="@+id/numberField"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:gravity="center"
+            android:ems="10"
+            android:id="@+id/addNumberField"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+        <TextView
+            android:text="Position:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:id="@+id/positionField"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+        <Spinner
+            android:layout_width="150dp"
+            android:layout_height="43dp"
+            android:layout_marginLeft="120dp"
+            android:gravity="center"
+            android:id="@+id/spinner"
+            android:backgroundTint="@color/common_google_signin_btn_text_dark_default" />
+
+        <TextView
+            android:text="Grade:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:id="@+id/gradeField"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:gravity="center"
+            android:ems="10"
+            android:id="@+id/addGradeField"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+<!-- Old stuff below -->
+<!--
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -41,9 +188,7 @@
         android:layout_height="50dp"
 
         android:layout_marginTop="560dp"
-        android:id="@+id/mainMenuButton" />
-
-
+        android:id="@+id/mainMenuButton"
         android:background="@color/common_google_signin_btn_text_dark_default" />
 
 
@@ -56,7 +201,7 @@
         android:id="@+id/doneRosterButton"
         android:background="@color/common_google_signin_btn_text_dark_default" />
 
-    <LinearLayout
+    <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="430dp"
@@ -158,5 +303,6 @@
             android:ems="10"
             android:id="@+id/addGradeField"
             android:textColor="@color/common_google_signin_btn_text_dark_default" />
-    </LinearLayout>
+    </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>
+-->

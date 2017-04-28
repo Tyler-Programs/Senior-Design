@@ -58,19 +58,19 @@
             android:background="@color/common_google_signin_btn_text_dark_default" />
 
         <Button
-            android:text="Share"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:id="@+id/statsButton"
-            android:background="@color/common_google_signin_btn_text_dark_default" />
-
-        <Button
             android:text="View Team Events"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:id="@+id/eventsButton"
+            android:background="@color/common_google_signin_btn_text_dark_default" />
+
+        <Button
+            android:text="Share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:id="@+id/statsButton"
             android:background="@color/common_google_signin_btn_text_dark_default" />
 
     </LinearLayout>

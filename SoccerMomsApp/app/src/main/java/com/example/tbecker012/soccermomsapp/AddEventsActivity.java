@@ -73,6 +73,8 @@ public class AddEventsActivity extends AppCompatActivity implements EditText.OnC
                 startActivity(new Intent(AddEventsActivity.this, DirectoryActivity.class).putExtra("Team_Name",getTeamName()));
             }
         });
+
+        fileManager.createEventsFile(getApplicationContext());
     }
 
     @Override

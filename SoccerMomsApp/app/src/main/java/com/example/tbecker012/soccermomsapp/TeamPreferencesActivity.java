@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.io.File;
 
@@ -49,11 +50,19 @@ public class TeamPreferencesActivity extends AppCompatActivity implements EditTe
             @Override
             public void onClick(View v) {
                 String teamName = atf.getText().toString(); // get the text from the team name field
-                FileManager fileManager = new FileManager(teamName); // create a file manager with that team name
-                fileManager.createDirectory(getApplicationContext()); // create the directory
-                fileManager.createRosterFile(getApplicationContext()); // create the roster text file
-                writePreferences();
-                startActivity(new Intent(TeamPreferencesActivity.this, AddRosterActivity.class).putExtra("Team_Name",getName())); // getTeamName -> getName
+
+                if(!teamName.isEmpty()) {
+                    FileManager fileManager = new FileManager(teamName); // create a file manager with that team name
+                    fileManager.createDirectory(getApplicationContext()); // create the directory
+                    fileManager.createRosterFile(getApplicationContext()); // create the roster text file
+                    writePreferences();
+                    startActivity(new Intent(TeamPreferencesActivity.this, AddRosterActivity.class).putExtra("Team_Name", getName())); // getTeamName -> getName
+                }
+                else
+                {
+                    Toast t = new Toast(getApplicationContext()).makeText(getApplicationContext(),"Please enter a team name.", Toast.LENGTH_LONG);
+                    t.show();
+                }
             }
         });
         gts.setAdapter(adapter);

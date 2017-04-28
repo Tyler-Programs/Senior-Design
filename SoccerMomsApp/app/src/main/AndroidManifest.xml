@@ -42,7 +42,7 @@
             />
         <activity
             android:name=".HomeActivity"
-            android:label="@string/title_activity_home"
+            android:label="Soccer Mom's App"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

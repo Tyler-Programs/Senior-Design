@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class AddRosterActivity extends AppCompatActivity implements EditText.OnClickListener{
     public Button mmb, drb, apb;
@@ -52,7 +53,7 @@ public class AddRosterActivity extends AppCompatActivity implements EditText.OnC
             @Override
             public void onClick(View v) {
                 try {
-                    fileManager.createEventsFile(getApplicationContext());
+                    //fileManager.createEventsFile(getApplicationContext());
                     startActivity(new Intent(AddRosterActivity.this, AddEventsActivity.class).putExtra("Team_Name", getTeamName()));
                 } catch (Exception e)
                 {
@@ -65,10 +66,17 @@ public class AddRosterActivity extends AppCompatActivity implements EditText.OnC
             @Override
             public void onClick(View v){ //Add a player to the existing roster file
                 //data in format: Name#Age#Player Number#Position#Grade
-                String teamName = getTeamName(); // Get the team from the last activity
-                fileManager = new FileManager(teamName); // create the file manager with that team name
-                fileManager.addPlayer(getPlayerInfo(), getApplicationContext()); // write the player's data to the file
-                clearEditTextFields(); // reset the edit text fields for the next player
+                if(!addnamef.getText().toString().isEmpty() && !addnumf.getText().toString().isEmpty())
+                {
+                    Toast t = new Toast(getApplicationContext()).makeText(getApplicationContext(),"Please enter a player name or number.", Toast.LENGTH_LONG);
+                    t.show();
+                }
+                else {
+                    String teamName = getTeamName(); // Get the team from the last activity
+                    fileManager = new FileManager(teamName); // create the file manager with that team name
+                    fileManager.addPlayer(getPlayerInfo(), getApplicationContext()); // write the player's data to the file
+                    clearEditTextFields(); // reset the edit text fields for the next player
+                }
             }
         });
 

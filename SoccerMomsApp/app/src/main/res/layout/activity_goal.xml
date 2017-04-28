@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.tbecker012.soccermomsapp.GoalActivity">
+    tools:context="com.example.tbecker012.soccermomsapp.GoalActivity"
+    android:background="@color/colorPrimaryDark">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -36,7 +37,8 @@
             android:textAlignment="center"
             android:textSize="46dp"
             android:textStyle="bold"
-            android:id="@+id/textView2themeField" />
+            android:id="@+id/textView2themeField"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"/>
 
         <TextView
             android:text="Goal scored by:"
@@ -45,7 +47,8 @@
             android:layout_marginTop="30dp"
             android:textAlignment="center"
             android:textSize="20dp"
-            android:id="@+id/goalPromptField" />
+            android:id="@+id/goalPromptField"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"/>
 
         <Spinner
             android:layout_width="match_parent"
@@ -60,7 +63,8 @@
             android:layout_marginTop="30dp"
             android:textAlignment="center"
             android:textSize="20dp"
-            android:id="@+id/assistsField1" />
+            android:id="@+id/assistsField1"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"/>
 
         <Spinner
             android:layout_width="match_parent"
@@ -75,7 +79,8 @@
             android:layout_marginTop="30dp"
             android:textAlignment="center"
             android:textSize="20dp"
-            android:id="@+id/assistsField2" />
+            android:id="@+id/assistsField2"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"/>
 
         <Spinner
             android:layout_width="match_parent"
